@@ -112,7 +112,7 @@ nav ul li a:hover {
     height: 900px;
     position: relative;
     display: flex;
-    margin-top: 60px;
+    margin-top: 50px;
     align-items: center;
     overflow: hidden;
 }
@@ -1106,7 +1106,7 @@ footer {
 @media (max-width: 768px) {
     .impressum-container {
         padding: 25px;
-        margin: 40px 20px;
+        margin: 80px 20px;
     }
 
     .impressum-header h1 {
@@ -1237,7 +1237,7 @@ ul.privacy-list li {
 @media (max-width: 768px) {
     .datenschutz-container {
         padding: 25px;
-        margin: 40px 20px;
+        margin: 80px 20px;
     }
 
     .datenschutz-header h1 {
