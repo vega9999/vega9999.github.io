@@ -112,7 +112,7 @@ nav ul li a:hover {
     height: 900px;
     position: relative;
     display: flex;
-    margin-top: 65px;
+    margin-top: 60px;
     align-items: center;
     overflow: hidden;
 }
@@ -144,11 +144,6 @@ nav ul li a:hover {
     color: white;
     align-content: center;
     max-width: 800px;
-}
-
-.pinewood-font {
-    font-size: 68px;
-    font-weight: bold;
 }
 
 .hero h1 {
