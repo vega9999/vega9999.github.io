@@ -927,7 +927,6 @@ footer {
     font-size: 14px;
 }
 
-/* Responsive Design */
 @media (max-width: 992px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -1104,11 +1103,10 @@ footer {
     color: var(--text-dark);
 }
 
-/* Responsives Design */
 @media (max-width: 768px) {
     .impressum-container {
         padding: 25px;
-        margin: 20px;
+        margin: 40px 20px;
     }
 
     .impressum-header h1 {
@@ -1236,11 +1234,10 @@ ul.privacy-list li {
     padding-left: 5px;
 }
 
-/* Responsives Design */
 @media (max-width: 768px) {
     .datenschutz-container {
         padding: 25px;
-        margin: 20px;
+        margin: 40px 20px;
     }
 
     .datenschutz-header h1 {
