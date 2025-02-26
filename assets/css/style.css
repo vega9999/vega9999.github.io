@@ -1106,7 +1106,7 @@ footer {
 @media (max-width: 768px) {
     .impressum-container {
         padding: 25px;
-        margin: 80px 20px;
+        margin: 100px 20px;
     }
 
     .impressum-header h1 {
@@ -1237,7 +1237,7 @@ ul.privacy-list li {
 @media (max-width: 768px) {
     .datenschutz-container {
         padding: 25px;
-        margin: 80px 20px;
+        margin: 100px 20px;
     }
 
     .datenschutz-header h1 {
