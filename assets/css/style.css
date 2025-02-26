@@ -571,19 +571,18 @@ nav ul li a:hover {
 }
 
 .cta h2 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    font-family: 'Key Tab Metal', sans-serif;
+    color: var(--light-color);
 }
 
 .cta p {
     font-size: 1.1rem;
     max-width: 700px;
     margin: 0 auto 30px;
+    color: var(--light-color);
 }
 
 .cta .btn {
-    background-color: white;
+    background-color: var(--light-color);
     color: var(--primary-color);
 }
 
