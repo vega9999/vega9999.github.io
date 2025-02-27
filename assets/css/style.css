@@ -24,6 +24,7 @@ body {
     color: var(--dark-color);
     line-height: 1.6;
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 a {
