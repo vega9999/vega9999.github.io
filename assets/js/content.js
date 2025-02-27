@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function() {
         prevBtn.style.opacity = currentIndex === 0 ? '0.3' : '1';
         prevBtn.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
 
-        const lastVisibleIndex = totalItems - visibleItems;
+        const lastVisibleIndex = Math.max(0, totalItems - visibleItems);
         nextBtn.style.opacity = currentIndex >= lastVisibleIndex ? '0.3' : '1';
         nextBtn.style.pointerEvents = currentIndex >= lastVisibleIndex ? 'none' : 'auto';
     }
