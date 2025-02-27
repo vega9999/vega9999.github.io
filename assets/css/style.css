@@ -92,8 +92,10 @@ nav ul {
 }
 
 nav ul li a {
+    display: block;
     font-weight: 500;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 nav ul li a:hover {
@@ -139,7 +141,6 @@ nav ul li a:hover {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 /* Hero Section */
 .hero {
