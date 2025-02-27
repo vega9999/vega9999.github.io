@@ -38,21 +38,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Service Card Effect
-document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".service-card");
+document.addEventListener('DOMContentLoaded', function() {
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        const buffer = 100;
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) + buffer &&
+            rect.bottom >= 0
+        );
+    }
+
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    function checkVisibility() {
+        serviceCards.forEach(card => {
+            if (isElementInViewport(card)) {
+                card.classList.add('visible');
+            } else {
+                // Optional: Entferne die visible-Klasse, wenn die Karte aus dem Viewport scrollt
+                // card.classList.remove('visible');
             }
         });
-    }, {
-        threshold: 0.2,
-        rootMargin: "0px 0px -100px 0px"
-    });
+    }
 
-    cards.forEach(card => observer.observe(card));
+    checkVisibility();
+
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('resize', checkVisibility);
 });
 
 
