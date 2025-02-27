@@ -56,7 +56,7 @@ ul {
 }
 
 .btn:hover {
-    background-color: var(--accent-color);
+    background-color: var(--primary-dark);
     transform: translateY(-2px);
 }
 
@@ -112,7 +112,9 @@ nav ul li a:hover {
     height: 900px;
     position: relative;
     display: flex;
-    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65px;
     align-items: center;
     overflow: hidden;
 }
@@ -142,19 +144,38 @@ nav ul li a:hover {
     position: relative;
     z-index: 1;
     color: white;
-    align-content: center;
     max-width: 800px;
+    text-align: center;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     line-height: 1.2;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 400;
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+.hero .btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
 }
 
 /* Services Section */
@@ -183,16 +204,22 @@ nav ul li a:hover {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .service-card {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
 }
 
 .service-card:hover {
@@ -207,6 +234,9 @@ nav ul li a:hover {
 }
 
 .service-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding: 20px;
 }
 
@@ -237,6 +267,23 @@ nav ul li a:hover {
     left: 0;
     color: var(--primary-color);
     font-weight: bold;
+}
+
+.service-content .btn {
+    margin-top: auto;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.service-content .btn:hover {
+    background-color: var(--primary-dark);
+    transition: all 0.6s ease;
 }
 
 /* --- Allgemeine Timeline-Stile --- */
@@ -588,6 +635,7 @@ nav ul li a:hover {
 
 .cta .btn:hover {
     background-color: var(--light-color);
+    transition: all 0.6s ease;
 }
 
 /* Popup Styles */
@@ -718,6 +766,7 @@ nav ul li a:hover {
 
 .submit-btn:hover {
     background-color: var(--primary-dark);
+    transition: all 0.6s ease;
 }
 
 #form-message {
@@ -979,7 +1028,7 @@ footer {
     }
 
     .hero {
-        height: 500px;
+        height: 90vh;
         margin-top: 80px;
     }
 
@@ -992,6 +1041,10 @@ footer {
         font-size: 2rem;
     }
 
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
     .section-title h2 {
         font-size: 2rem;
     }
@@ -999,15 +1052,24 @@ footer {
 
 @media (max-width: 576px) {
     .hero {
-        height: 400px;
+        height: 90vh;
+        margin-top: 30px;
     }
 
     .hero h1 {
         font-size: 1.8rem;
     }
 
+    .hero h2 {
+        font-size: 1rem;
+    }
+
     .hero p {
         font-size: 1rem;
+    }
+
+    .hero .btn {
+        font-size: 0.8rem;
     }
 
     .section-title h2 {
