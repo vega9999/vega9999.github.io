@@ -222,6 +222,7 @@ nav ul li a:hover {
     opacity: 0;
     transform: translateX(-100%);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: transform, opacity;
 }
 
 .service-card:hover {
@@ -1090,6 +1091,11 @@ footer {
     .service-card {
         max-width: 320px;
         margin: 0 auto;
+        transform: translateX(-50%);
+    }
+
+    .service-card:nth-child(even) {
+        transform: translateX(50%);
     }
 }
 

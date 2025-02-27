@@ -47,7 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 entry.target.classList.add("visible");
             }
         });
-    }, { threshold: 0.2 });
+    }, {
+        threshold: 0.2,
+        rootMargin: "0px 0px -100px 0px"
+    });
 
     cards.forEach(card => observer.observe(card));
 });
