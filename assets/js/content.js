@@ -41,11 +41,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.addEventListener('DOMContentLoaded', function() {
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
-        const buffer = 100;
+
+        const visibleThreshold = rect.height * 0.3;
 
         return (
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) + buffer &&
-            rect.bottom >= 0
+            rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+            (rect.bottom - visibleThreshold) > 0
         );
     }
 
@@ -55,14 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
         serviceCards.forEach(card => {
             if (isElementInViewport(card)) {
                 card.classList.add('visible');
-            } else {
-                // Optional: Entferne die visible-Klasse, wenn die Karte aus dem Viewport scrollt
-                // card.classList.remove('visible');
             }
         });
     }
 
-    checkVisibility();
+    setTimeout(checkVisibility, 300);
 
     window.addEventListener('scroll', checkVisibility);
     window.addEventListener('resize', checkVisibility);

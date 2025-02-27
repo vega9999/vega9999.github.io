@@ -23,6 +23,7 @@ body {
     background-color: var(--light-color);
     color: var(--dark-color);
     line-height: 1.6;
+    max-width: 100%;
 }
 
 a {
@@ -1091,11 +1092,17 @@ footer {
     .service-card {
         max-width: 320px;
         margin: 0 auto;
-        transform: translateX(-50%);
+        opacity: 0;
+        transform: translateX(50%);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
 
     .service-card:nth-child(even) {
-        transform: translateX(50%);
+        transform: translateX(-50%);
+    }
+    .service-card.visible {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
