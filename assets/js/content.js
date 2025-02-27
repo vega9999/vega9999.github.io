@@ -179,15 +179,23 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
     let currentLightboxIndex = 0;
 
+    const existingNavs = lightbox.querySelectorAll('.lightbox-nav');
+    existingNavs.forEach(nav => nav.remove());
+
     const lightboxNavPrev = document.createElement('div');
     lightboxNavPrev.className = 'carousel-nav prev lightbox-nav';
     lightboxNavPrev.innerHTML = '&#10094;';
+    lightboxNavPrev.setAttribute('aria-label', 'Vorheriges Bild');
     lightbox.appendChild(lightboxNavPrev);
 
     const lightboxNavNext = document.createElement('div');
     lightboxNavNext.className = 'carousel-nav next lightbox-nav';
     lightboxNavNext.innerHTML = '&#10095;';
+    lightboxNavNext.setAttribute('aria-label', 'Nächstes Bild');
     lightbox.appendChild(lightboxNavNext);
+
+    lightboxNavPrev.style.zIndex = '1020';
+    lightboxNavNext.style.zIndex = '1020';
 
     function updateCarousel() {
         track.style.transform = `translateX(-${currentIndex * itemTotalWidth}px)`;
@@ -225,13 +233,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    lightboxNavPrev.addEventListener('click', () => {
+    lightboxNavPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
         if (currentLightboxIndex > 0) {
             updateLightbox(currentLightboxIndex - 1);
         }
     });
 
-    lightboxNavNext.addEventListener('click', () => {
+    lightboxNavNext.addEventListener('click', (e) => {
+        e.stopPropagation();
         if (currentLightboxIndex < totalItems - 1) {
             updateLightbox(currentLightboxIndex + 1);
         }
