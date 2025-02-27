@@ -37,6 +37,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// About scroll reveal
+document.addEventListener('DOMContentLoaded', function() {
+    const revealElements = document.querySelectorAll('.reveal-element, .reveal-left, .reveal-right');
+
+    function checkReveal() {
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (elementTop < windowHeight * 0.85) {
+                element.classList.add('revealed');
+            }
+        });
+    }
+
+    checkReveal();
+
+    window.addEventListener('scroll', checkReveal);
+});
+
 // Service Card Effect
 document.addEventListener('DOMContentLoaded', function() {
     function isElementInViewport(el) {
