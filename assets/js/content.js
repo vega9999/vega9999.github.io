@@ -160,7 +160,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Referenzen
 document.addEventListener('DOMContentLoaded', function() {
-    // Grundlegende Elemente
     const track = document.getElementById('imageTrack');
     const items = track.querySelectorAll('.carousel-item');
     const prevBtn = document.getElementById('prevBtn');
@@ -169,25 +168,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxClose = document.getElementById('lightboxClose');
 
-    // Konfiguration
     const itemWidth = items[0].offsetWidth;
-    const itemsGap = 20; // Entspricht dem --carousel-gap in CSS
+    const itemsGap = 20;
     const itemTotalWidth = itemWidth + itemsGap;
     const totalItems = items.length;
 
-    // Anzahl der gleichzeitig sichtbaren Elemente berechnen (basierend auf Containerbreite)
     const containerWidth = track.parentElement.offsetWidth;
     const visibleItems = Math.floor(containerWidth / itemTotalWidth);
 
-    // Starten mit dem ersten Element
     let currentIndex = 0;
+    let currentLightboxIndex = 0;
 
-    // Funktion zum Aktualisieren des Karussells
+    const lightboxNavPrev = document.createElement('div');
+    lightboxNavPrev.className = 'carousel-nav prev lightbox-nav';
+    lightboxNavPrev.innerHTML = '&#10094;';
+    lightbox.appendChild(lightboxNavPrev);
+
+    const lightboxNavNext = document.createElement('div');
+    lightboxNavNext.className = 'carousel-nav next lightbox-nav';
+    lightboxNavNext.innerHTML = '&#10095;';
+    lightbox.appendChild(lightboxNavNext);
+
     function updateCarousel() {
-        // Transformiere den Track zur aktuellen Position
         track.style.transform = `translateX(-${currentIndex * itemTotalWidth}px)`;
 
-        // Aktiviere/Deaktiviere Navigationspfeile basierend auf Position
         prevBtn.style.opacity = currentIndex === 0 ? '0.3' : '1';
         prevBtn.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
 
@@ -196,7 +200,17 @@ document.addEventListener('DOMContentLoaded', function() {
         nextBtn.style.pointerEvents = currentIndex >= lastVisibleIndex ? 'none' : 'auto';
     }
 
-    // Event-Listener für Navigationspfeile
+    function updateLightbox(index) {
+        currentLightboxIndex = index;
+        lightboxImg.src = items[index].querySelector('img').src;
+
+        lightboxNavPrev.style.opacity = index === 0 ? '0.3' : '1';
+        lightboxNavPrev.style.pointerEvents = index === 0 ? 'none' : 'auto';
+
+        lightboxNavNext.style.opacity = index === totalItems - 1 ? '0.3' : '1';
+        lightboxNavNext.style.pointerEvents = index === totalItems - 1 ? 'none' : 'auto';
+    }
+
     prevBtn.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
@@ -211,11 +225,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Lightbox-Funktionalität
+    lightboxNavPrev.addEventListener('click', () => {
+        if (currentLightboxIndex > 0) {
+            updateLightbox(currentLightboxIndex - 1);
+        }
+    });
+
+    lightboxNavNext.addEventListener('click', () => {
+        if (currentLightboxIndex < totalItems - 1) {
+            updateLightbox(currentLightboxIndex + 1);
+        }
+    });
+
     items.forEach((item, index) => {
         item.addEventListener('click', () => {
-            const imgSrc = item.querySelector('img').src;
-            lightboxImg.src = imgSrc;
+            updateLightbox(index);
             lightbox.classList.add('active');
         });
     });
@@ -224,27 +248,32 @@ document.addEventListener('DOMContentLoaded', function() {
         lightbox.classList.remove('active');
     });
 
-    // Schließe Lightbox auch bei Klick außerhalb des Bildes
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
             lightbox.classList.remove('active');
         }
     });
 
-    // Tastaturnavigation
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft' && currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        } else if (e.key === 'ArrowRight' && currentIndex < totalItems - visibleItems) {
-            currentIndex++;
-            updateCarousel();
-        } else if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-            lightbox.classList.remove('active');
+        if (lightbox.classList.contains('active')) {
+            if (e.key === 'ArrowLeft' && currentLightboxIndex > 0) {
+                updateLightbox(currentLightboxIndex - 1);
+            } else if (e.key === 'ArrowRight' && currentLightboxIndex < totalItems - 1) {
+                updateLightbox(currentLightboxIndex + 1);
+            } else if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+            }
+        } else {
+            if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            } else if (e.key === 'ArrowRight' && currentIndex < totalItems - visibleItems) {
+                currentIndex++;
+                updateCarousel();
+            }
         }
     });
 
-    // Touch-Navigation
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -260,26 +289,39 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleSwipe() {
         const swipeThreshold = 50;
         if (touchEndX < touchStartX - swipeThreshold && currentIndex < totalItems - visibleItems) {
-            // Nach links wischen -> nächstes Bild
             currentIndex++;
             updateCarousel();
         } else if (touchEndX > touchStartX + swipeThreshold && currentIndex > 0) {
-            // Nach rechts wischen -> vorheriges Bild
             currentIndex--;
             updateCarousel();
+        }
+    }
+
+    lightbox.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    lightbox.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleLightboxSwipe();
+    });
+
+    function handleLightboxSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold && currentLightboxIndex < totalItems - 1) {
+            updateLightbox(currentLightboxIndex + 1);
+        } else if (touchEndX > touchStartX + swipeThreshold && currentLightboxIndex > 0) {
+            updateLightbox(currentLightboxIndex - 1);
         }
     }
 
     // Initialisierung
     updateCarousel();
 
-    // Karussell bei Größenänderungen des Fensters aktualisieren
     window.addEventListener('resize', () => {
-        // Neu berechnen, wie viele Elemente sichtbar sind
         const containerWidth = track.parentElement.offsetWidth;
         const visibleItems = Math.floor(containerWidth / itemTotalWidth);
 
-        // Wenn der aktuelle Index ungültig wird, passe ihn an
         if (currentIndex > totalItems - visibleItems) {
             currentIndex = Math.max(0, totalItems - visibleItems);
         }
