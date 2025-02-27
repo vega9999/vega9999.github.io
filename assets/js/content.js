@@ -167,6 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxClose = document.getElementById('lightboxClose');
+    const body = document.body;
 
     const itemWidth = items[0].offsetWidth;
     const itemsGap = 20;
@@ -178,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentIndex = 0;
     let currentLightboxIndex = 0;
+    let scrollPosition = 0;
 
     const existingNavs = lightbox.querySelectorAll('.lightbox-nav');
     existingNavs.forEach(nav => nav.remove());
@@ -196,6 +198,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     lightboxNavPrev.style.zIndex = '1020';
     lightboxNavNext.style.zIndex = '1020';
+
+    function lockScroll() {
+        scrollPosition = window.pageYOffset;
+        body.style.overflow = 'hidden';
+        body.style.position = 'fixed';
+        body.style.top = `-${scrollPosition}px`;
+        body.style.width = '100%';
+    }
+
+    function unlockScroll() {
+        body.style.removeProperty('overflow');
+        body.style.removeProperty('position');
+        body.style.removeProperty('top');
+        body.style.removeProperty('width');
+        window.scrollTo(0, scrollPosition);
+    }
 
     function updateCarousel() {
         track.style.transform = `translateX(-${currentIndex * itemTotalWidth}px)`;
@@ -251,16 +269,19 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', () => {
             updateLightbox(index);
             lightbox.classList.add('active');
+            lockScroll();
         });
     });
 
     lightboxClose.addEventListener('click', () => {
         lightbox.classList.remove('active');
+        unlockScroll();
     });
 
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
             lightbox.classList.remove('active');
+            unlockScroll();
         }
     });
 
@@ -272,6 +293,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 updateLightbox(currentLightboxIndex + 1);
             } else if (e.key === 'Escape') {
                 lightbox.classList.remove('active');
+                unlockScroll();
             }
         } else {
             if (e.key === 'ArrowLeft' && currentIndex > 0) {
@@ -325,7 +347,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Initialisierung
     updateCarousel();
 
     window.addEventListener('resize', () => {
