@@ -218,8 +218,10 @@ nav ul li a:hover {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .service-card:hover {
@@ -231,6 +233,15 @@ nav ul li a:hover {
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
+
+.service-card:nth-child(even) {
+    transform: translateX(100%);
+}
+
+.service-card.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .service-content {
