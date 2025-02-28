@@ -255,7 +255,6 @@ nav ul li a:hover {
     position: relative;
     z-index: 2;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    border-radius: 0;
     transition: transform 0.5s ease;
     border-radius: 10px;
 }
