@@ -15,6 +15,38 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Navbar section tracking
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    const observerOptions = {
+        root: null,
+        threshold: 0.8,
+    };
+
+    const observerCallback = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                let activeSection = entry.target.getAttribute("id");
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+
+                    if (link.getAttribute("href").includes(activeSection)) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach((section) => observer.observe(section));
+});
+
+
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
