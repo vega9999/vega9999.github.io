@@ -910,12 +910,6 @@ ul {
     overflow: hidden;
 }
 
-@media (min-width: 992px) {
-    .map-wrapper {
-        flex-direction: row;
-    }
-}
-
 #map {
     flex: 1;
     height: 400px;
@@ -924,13 +918,6 @@ ul {
     position: relative;
     z-index: 1;
     border-radius: 8px 8px 0 0;
-}
-
-@media (min-width: 992px) {
-    #map {
-        height: auto;
-        border-radius: 8px 0 0 8px;
-    }
 }
 
 .location-info {
@@ -943,13 +930,6 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-@media (min-width: 992px) {
-    .location-info {
-        width: 350px;
-        border-radius: 0 8px 8px 0;
-    }
 }
 
 .location-info h3 {
@@ -2443,5 +2423,19 @@ ul.privacy-list li {
     .dropdown__link:focus {
         background-color: rgba(255, 255, 255, 0.1);
         border-left: none;
+    }
+
+    .map-wrapper {
+        flex-direction: row;
+    }
+
+    #map {
+        height: auto;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .location-info {
+        width: 350px;
+        border-radius: 0 8px 8px 0;
     }
 }
