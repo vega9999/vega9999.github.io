@@ -9,23 +9,32 @@
 </head>
 <body>
 <!-- Header -->
-<header>
+<header class="header">
   <div class="container">
-    <div class="logo-nav">
-      <div class="logo">
+    <div class="header__wrapper">
+      <div class="header__logo">
         <a href="index.html">
-          <img src="/assets/img/Logo.png" alt="Holz-Metall-Riedel Logo">
+          <img src="/assets/img/Logo.png" loading="lazy" alt="Holz-Metall-Riedel Logo">
         </a>
       </div>
-      <button class="mobile-menu-btn">☰</button>
-      <nav>
-        <ul>
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#about">Über mich</a></li>
-          <li><a href="index.html#leistungen">Leistungen</a></li>
-          <li><a href="index.html#projektablauf">Projektablauf</a></li>
-          <li><a href="index.html#referenzen">Referenzen</a></li>
-          <li><a href="index.html#kontakt">Kontakt</a></li>
+
+      <button class="header__menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </span>
+      </button>
+
+      <nav class="nav" aria-hidden="true">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html#home" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="index.html#about" class="nav__link">Über mich</a></li>
+          <li class="nav__item"><a href="index.html#leistungen" class="nav__link">Leistungen</a></li>
+          <li class="nav__item"><a href="index.html#einzugsgebiet" class="nav__link">Einzugsgebiet</a></li>
+          <li class="nav__item"><a href="index.html#projektablauf" class="nav__link">Projektablauf</a></li>
+          <li class="nav__item"><a href="index.html#referenzen" class="nav__link">Referenzen</a></li>
+          <li class="nav__item"><a href="index.html#kontakt" class="nav__link">Kontakt</a></li>
         </ul>
       </nav>
     </div>
@@ -54,7 +63,7 @@
         <li><a href="#rechte">3. Ihre Rechte</a></li>
         <li><a href="#erhebung">4. Erhebung von personenbezogenen Daten bei Besuch unserer Website</a></li>
         <li><a href="#cookies">5. Cookies und Webanalyse</a></li>
-        <li><a href="#kontakt">6. Kontaktformular und E-Mail-Kontakt</a></li>
+        <li><a href="#kontaktformulards">6. Kontaktformular und E-Mail-Kontakt</a></li>
         <li><a href="#socialmedia">7. Soziale Medien</a></li>
         <li><a href="#aenderungen">8. Änderungen der Datenschutzerklärung</a></li>
       </ul>
@@ -68,7 +77,7 @@
         Zum Weinberg 18<br>
         02923 Horka<br>
         Telefon: +49 1523 2034929<br>
-        E-Mail: hannes.riedel2000@me.com
+        E-Mail: info@holz-metall-riedel.de
       </p>
     </div>
 
@@ -127,7 +136,7 @@
       <p>Diese Website nutzt derzeit keine Funktionen des Webanalysedienstes Google Analytics. Sollte sich dies ändern, werden wir diese Datenschutzerklärung entsprechend aktualisieren.</p>
     </div>
 
-    <div id="kontakt" class="section">
+    <div id="kontaktformulards" class="section">
       <h2>6. Kontaktformular und E-Mail-Kontakt</h2>
       <p>Wenn Sie uns per Kontaktformular oder E-Mail kontaktieren, werden die von Ihnen mitgeteilten Daten (Ihre E-Mail-Adresse, ggf. Ihr Name und Ihre Telefonnummer) von uns gespeichert, um Ihre Fragen zu beantworten. Die in diesem Zusammenhang anfallenden Daten löschen wir, nachdem die Speicherung nicht mehr erforderlich ist, oder schränken die Verarbeitung ein, falls gesetzliche Aufbewahrungspflichten bestehen.</p>
       <p>Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können diese Einwilligung jederzeit widerrufen. Dafür reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.</p>
@@ -146,7 +155,7 @@
 </main>
 
 <!-- Footer -->
-<footer id="kontakt">
+<footer id="footer">
   <div class="container">
     <div class="footer-content">
       <div class="footer-column">
@@ -172,6 +181,7 @@
         <a href="index.html#home">Home</a>
         <a href="index.html#about">Über mich</a>
         <a href="index.html#leistungen">Leistungen</a>
+        <a href="index.html#einzugsgebiet">Einzugsgebiet</a>
         <a href="index.html#projektablauf">Projektablauf</a>
         <a href="index.html#referenzen">Referenzen</a>
         <a href="index.html#kontakt">Kontakt</a>

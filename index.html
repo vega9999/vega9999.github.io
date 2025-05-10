@@ -1,44 +1,55 @@
-<!DOCTYPE html>
-<html lang="de">
+ <!DOCTYPE html>
+ <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holz Metall Riedel | Tischlerei & Metallbau in Horka | Nachhaltiges Handwerk</title>
-    <meta name="description" content="Holz Metall Riedel - Ihr Fachmann für maßgeschneiderte Holz- und Metalllösungen in Horka. Tischlerei, Holzbau, Metallbau und Spezialbau mit Qualität und Nachhaltigkeit.">
-    <meta name="keywords" content="Tischlerei Horka, Metallbau, Holzbau, Spezialbau, Möbelbau, Treppenbau, Fenster, Türen, Sauna, Hannes Riedel, nachhaltiges Handwerk, Tischler, Tischlerei, Holzhandwerk, Möbelbau, Innenausbau, Holzarbeite, Möbelanfertigung, Holztreppen, Parkettverlegung, Fensterbau, Holzverkleidungen">
+    <title>Holz Metall Riedel | Tischlerei & Metallbau in Horka</title>
+    <meta name="description" content="Holz Metall Riedel - Ihr Fachmann für maßgeschneiderte Holz- und Metalllösungen in Horka. Tischlerei, Holzbau, Metallbau und Spezialbau.">
+    <meta name="keywords" content="Hannes Riedel, Tischlerei Horka, Metallbau Horka, Holzbau Horka, Spezialbau Horka, Möbelbau Horka, Treppenbau Horka, Fensterbau Horka, Türen nach Maß, Sauna nach Maß, nachhaltiges Handwerk, Tischler Horka, Holzhandwerk, Möbelanfertigung Horka, individuelle Holzmöbel, Innenausbau Horka, Holztüren und Fenster, Carports und Überdachungen, Maßanfertigungen aus Holz, Balkongeländer aus Metall, Parkettverlegung, Holzverkleidungen, regionale Tischlerei, hochwertige Handwerkskunst">
     <meta name="author" content="Hannes Riedel">
     <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="geo.region" content="DE-SN">
+    <meta name="geo.placename" content="Horka">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="business.business">
     <meta property="og:url" content="https://www.holz-metall-riedel.de/">
     <meta property="og:title" content="Holz Metall Riedel | Tischlerei & Metallbau für nachhaltige Lösungen">
-    <meta property="og:description" content="Maßgeschneiderte Lösungen aus Holz und Metall - von Möbeln und Treppen bis zu Spezialbauten. Qualität und Nachhaltigkeit aus einer Hand.">
-    <meta property="og:image" content="https://www.holz-metall-riedel.de/assets/img/Logo.png">
+    <meta property="og:description" content="Maßgeschneiderte Lösungen aus Holz und Metall - Qualität und Nachhaltigkeit aus einer Hand.">
+    <meta property="og:image" content="https://www.holz-metall-riedel.de/assets/img/Logo_Holz_Metall_Riedel.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.holz-metall-riedel.de/">
     <meta property="twitter:title" content="Holz Metall Riedel | Tischlerei & Metallbau">
     <meta property="twitter:description" content="Maßgeschneiderte Lösungen aus Holz und Metall - Qualität und Nachhaltigkeit aus einer Hand.">
-    <meta property="twitter:image" content="https://www.holz-metall-riedel.de/assets/img/HMR%20Logo%20ohne%20Hintergrund.png">
+    <meta property="twitter:image" content="https://www.holz-metall-riedel.de/assets/img/Logo_Holz_Metall_Riedel.png">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.holz-metall-riedel.de/">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Logo_Holz_Metall_Riedel.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/Logo_Holz_Metall_Riedel.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link href="https://fonts.cdnfonts.com/css/poland-can-into" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
-    <!-- Skripte -->
-    <script src="/assets/js/content.js" defer></script>
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/poland-can-into?styles=400,700" rel="stylesheet">
 
+    <!-- Schema.org für LocalBusiness -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Holz Metall Riedel",
-            "image": "https://www.holz-metall-riedel.de/assets/img/Logo.png",
+            "image": "https://www.holz-metall-riedel.de/assets/img/Logo_Holz_Metall_Riedel.png",
+            "logo": "https://www.holz-metall-riedel.de/assets/img/Logo_Holz_Metall_Riedel.png",
             "description": "Ihr Fachmann für maßgeschneiderte Holz- und Metalllösungen. Tischlerei, Holzbau, Metallbau und Spezialbau in Horka.",
             "address": {
                 "@type": "PostalAddress",
@@ -46,6 +57,130 @@
                 "addressLocality": "Horka",
                 "postalCode": "02923",
                 "addressCountry": "DE"
+            },
+            "areaServed": [
+                {
+                    "@type": "City",
+                    "name": "Horka"
+                },
+                {
+                    "@type": "City",
+                    "name": "Niesky"
+                },
+                {
+                    "@type": "City",
+                    "name": "Görlitz"
+                },
+                {
+                    "@type": "City",
+                    "name": "Neißeaue"
+                },
+                {
+                    "@type": "City",
+                    "name": "Rietschen"
+                },
+                {
+                    "@type": "City",
+                    "name": "Waldhufen"
+                },
+                {
+                    "@type": "City",
+                    "name": "Mücka"
+                },
+                {
+                    "@type": "City",
+                    "name": "Hähnichen"
+                },
+                {
+                    "@type": "City",
+                    "name": "Kodersdorf"
+                },
+                {
+                    "@type": "City",
+                    "name": "Vierkirchen"
+                },
+                {
+                    "@type": "City",
+                    "name": "Niesky-See"
+                },
+                {
+                    "@type": "City",
+                    "name": "Königshain"
+                },
+                {
+                    "@type": "City",
+                    "name": "Kreba-Neudorf"
+                },
+                {
+                    "@type": "City",
+                    "name": "Quitzdorf am See"
+                },
+                {
+                    "@type": "City",
+                    "name": "Görlitz-Girbigsdorf"
+                },
+                {
+                    "@type": "City",
+                    "name": "Rothenburg/Oberlausitz"
+                },
+                {
+                    "@type": "City",
+                    "name": "Schöpstal-Girbigsdorf"
+                },
+                {
+                    "@type": "City",
+                    "name": "Kodersdorf-Särichen"
+                },
+                {
+                    "@type": "State",
+                    "name": "Sachsen"
+                }
+            ],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Handwerksleistungen",
+                "itemListElement": [
+                    {
+                        "@type": "OfferCatalog",
+                        "name": "Tischlerei",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Möbelbau"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Treppenbau"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Fensterbau"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "OfferCatalog",
+                        "name": "Metallbau",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Metallkonstruktionen"
+                                }
+                            }
+                        ]
+                    }
+                ]
             },
             "telephone": "+4915232034929",
             "email": "info@holz-metall-riedel.de",
@@ -68,29 +203,50 @@
             "sameAs": [
                 "https://www.facebook.com/holzmetallriedel",
                 "https://www.instagram.com/holzmetallriedel"
-            ]
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "reviewCount": "16"
+            }
         }
     </script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
 <!-- Header -->
-<header>
+<header class="header">
     <div class="container">
-        <div class="logo-nav">
-            <div class="logo">
+        <div class="header__wrapper">
+            <div class="header__logo">
                 <a href="index.html">
-                    <img src="/assets/img/Logo.png" loading="lazy" alt="Holz-Metall-Riedel Logo">
+                    <img src="/assets/img/Logo_Holz_Metall_Riedel.png" loading="lazy" alt="Holz Metall Riedel Logo">
                 </a>
             </div>
-            <button class="mobile-menu-btn">☰</button>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">Über mich</a></li>
-                    <li><a href="#leistungen">Leistungen</a></li>
-                    <li><a href="#projektablauf">Projektablauf</a></li>
-                    <li><a href="#referenzen">Referenzen</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
+
+            <button class="header__menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger">
+                  <span class="hamburger__bar"></span>
+                  <span class="hamburger__bar"></span>
+                  <span class="hamburger__bar"></span>
+                </span>
+            </button>
+
+            <nav class="nav" aria-hidden="true">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Über mich</a></li>
+                    <li class="nav__item dropdown">
+                        <a href="#leistungen" class="nav__link dropdown__toggle">Leistungen<span class="dropdown__arrow">▾</span></a>
+                        <ul class="dropdown__menu">
+                            <li class="dropdown__item"><a href="tischlerei.html" class="dropdown__link">Tischlerei</a></li>
+                            <li class="dropdown__item"><a href="metallbau.html" class="dropdown__link">Metallbau</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="#einzugsgebiet" class="nav__link">Einzugsgebiet</a></li>
+                    <li class="nav__item"><a href="#projektablauf" class="nav__link">Projektablauf</a></li>
+                    <li class="nav__item"><a href="#referenzen" class="nav__link">Referenzen</a></li>
+                    <li class="nav__item"><a href="#kontakt" class="nav__link">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
@@ -126,7 +282,7 @@
 
         <div class="about-container">
             <div class="about-image reveal-left">
-                <img src="/assets/img/about-img.jpeg" loading="lazy" alt="Hannes Riedel - Tischler und Metallbauer">
+                <img src="/assets/img/Bild_20250301_003.webp" loading="lazy" alt="Hannes Riedel - Tischler und Metallbauer">
             </div>
 
             <div class="about-content reveal-right">
@@ -173,9 +329,11 @@
             <h2>Unsere Leistungen</h2>
             <p>Ihr Projekt aus einer Hand - Qualität und Nachhaltigkeit stehen bei uns an erster Stelle.</p>
         </div>
+
+        <!-- Service Cards Grid -->
         <div class="services-grid">
             <div class="service-card">
-                <img src="/assets/img/Bild_20250227_036.jpg" loading="lazy" alt="Tischlerei">
+                <img src="/assets/img/Bild_20250301_042.webp" loading="lazy" alt="Tischlerei">
                 <div class="service-content">
                     <h3>Tischlerei</h3>
                     <p>Ihre Ideen und unser Holz</p>
@@ -185,10 +343,24 @@
                         <li>Treppenbau:<br>Für den guten Tritt bieten wir maßgeschneiderte Lösungen!</li>
                         <li>Holzböden:<br>Natürlichkeit, die begeistert! Unsere Holzfußböden machen den Unterschied.</li>
                     </ul>
+                    <a href="tischlerei.html" class="service-button">Mehr über Tischlerei erfahren</a>
                 </div>
             </div>
             <div class="service-card">
-                <img src="/assets/img/Bild_20250227_045.jpg" loading="lazy" alt="Holzbau">
+                <img src="/assets/img/Bild_20250301_028.webp" loading="lazy" alt="Metallbau">
+                <div class="service-content">
+                    <h3>Metallbau</h3>
+                    <p>Individuelle Metallkonstruktionen für jeden Bedarf</p>
+                    <ul class="feature-list">
+                        <li>Metallkonstruktionen:<br>Ob für den Innen- oder Außenbereich, wir bieten maßgeschneiderte Lösungen für jeden Bedarf.</li>
+                        <li>Metallverarbeitung:<br>Mit modernster Technik und handwerklichem Können verarbeiten wir eine breite Palette von Metallen. Jedes Stück wird nach Ihren Anforderungen gefertigt und von uns präzise umgesetzt.</li>
+                        <li>Sonderanfertigungen:<br>Sie haben eine besondere Idee? Kein Problem! Wir bieten auch individuelle Sonderanfertigungen an, die genau auf Ihre Bedürfnisse zugeschnitten sind.</li>
+                    </ul>
+                    <a href="metallbau.html" class="service-button">Mehr über Metallbau erfahren</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="/assets/img/Bild_20250301_043.webp" loading="lazy" alt="Holzbau">
                 <div class="service-content">
                     <h3>Holzbau</h3>
                     <p>Die Lösung, die Nachhaltigkeit und Ästhetik vereint</p>
@@ -200,19 +372,7 @@
                 </div>
             </div>
             <div class="service-card">
-                <img src="/assets/img/Bild_20250227_018.jpg" loading="lazy" alt="Metallbau">
-                <div class="service-content">
-                    <h3>Metallbau</h3>
-                    <p>Individuelle Metallkonstruktionen für jeden Bedarf</p>
-                    <ul class="feature-list">
-                        <li>Metallkonstruktionen:<br>Ob für den Innen- oder Außenbereich, wir bieten maßgeschneiderte Lösungen für jeden Bedarf.</li>
-                        <li>Metallverarbeitung:<br>Mit modernster Technik und handwerklichem Können verarbeiten wir eine breite Palette von Metallen. Jedes Stück wird nach Ihren Anforderungen gefertigt und von uns präzise umgesetzt.</li>
-                        <li>Sonderanfertigungen:<br>Sie haben eine besondere Idee? Kein Problem! Wir bieten auch individuelle Sonderanfertigungen an, die genau auf Ihre Bedürfnisse zugeschnitten sind.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="/assets/img/Bild_20250227_034.jpg" loading="lazy" alt="Spezialbau">
+                <img src="/assets/img/Bild_20250301_014.webp" loading="lazy" alt="Spezialbau">
                 <div class="service-content">
                     <h3>Spezialbau</h3>
                     <p>Individuelle Lösungen für besondere Anforderungen</p>
@@ -222,6 +382,43 @@
                         <li>Saunen und Wellnessbereiche:<br>Gönnen Sie sich pure Entspannung mit einer individuell angefertigten Sauna aus hochwertigem Holz. Wir fertigen Saunen, die perfekt auf Ihre Wünsche und Anforderungen abgestimmt sind.</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Einzugsgebiet Section -->
+<section id="einzugsgebiet" class="service-area">
+    <div class="container">
+        <div class="section-title">
+            <h2>Unser Einzugsgebiet</h2>
+            <p>Wir sind für Sie in der gesamten Oberlausitz und Umgebung tätig.</p>
+        </div>
+
+        <div class="map-container">
+            <div class="map-wrapper">
+                <div id="map"></div>
+                <div class="location-info">
+                    <h3>Wir sind für Sie da!</h3>
+                    <p class="location-description">Wählen Sie einen Ort, um mehr zu erfahren, oder bewegen Sie die Maus über die Karte.</p>
+                    <div id="location-details">
+                        <div class="location-placeholder">
+                            <span class="pulse-dot"></span>
+                            <p>Klicken Sie auf einen Standort für Details</p>
+                        </div>
+                    </div>
+                    <div class="service-radius">
+                        <div class="radius-indicator">
+                            <span class="radius-dot"></span>
+                            <span class="radius-line"></span>
+                            <span class="radius-text">Unser Einzugsgebiet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="location-list">
+                <h4>Alle Orte im Überblick</h4>
+                <ul id="city-list"></ul>
             </div>
         </div>
     </div>
@@ -277,182 +474,182 @@
         <div class="carousel-track" id="imageTrack">
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_001.jpg" loading="lazy" alt="Boden verlegen">
+                <img src="/assets/img/Bild_20250301_012.webp" loading="lazy" alt="Boden verlegen">
                 <div class="carousel-caption">
                     <h3>Boden verlegen</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_002.jpg" loading="lazy" alt="Hochbett">
+                <img src="/assets/img/Bild_20250301_018.webp" loading="lazy" alt="Hochbett">
                 <div class="carousel-caption">
                     <h3>Hochbett</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_003.jpg" loading="lazy" alt="Fensterbau">
+                <img src="/assets/img/Bild_20250301_019.webp" loading="lazy" alt="Fensterbau">
                 <div class="carousel-caption">
                     <h3>Fensterbau</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_004.jpg" loading="lazy" alt="Küchenbau">
+                <img src="/assets/img/Bild_20250301_007.webp" loading="lazy" alt="Küchenbau">
                 <div class="carousel-caption">
                     <h3>Küchenbau</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_028.jpg" loading="lazy" alt="Bar">
+                <img src="/assets/img/Bild_20250301_015.webp" loading="lazy" alt="Bar">
                 <div class="carousel-caption">
                     <h3>Bar</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_006.jpg" loading="lazy" alt="Möbelbau">
+                <img src="/assets/img/Bild_20250301_004.webp" loading="lazy" alt="Möbelbau">
                 <div class="carousel-caption">
                     <h3>Möbelbau</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_007.jpg" loading="lazy" alt="Treppengeländer">
+                <img src="/assets/img/Bild_20250301_002.webp" loading="lazy" alt="Treppengeländer">
                 <div class="carousel-caption">
                     <h3>Treppengeländer</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_008.jpg" loading="lazy" alt="Theke">
+                <img src="/assets/img/Bild_20250301_035.webp" loading="lazy" alt="Theke">
                 <div class="carousel-caption">
                     <h3>Theke</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_009.jpg" loading="lazy" alt="Lagerschrank">
+                <img src="/assets/img/Bild_20250301_036.webp" loading="lazy" alt="Lagerschrank">
                 <div class="carousel-caption">
                     <h3>Lagerschrank</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_010.jpg" loading="lazy" alt="Treppenbau">
+                <img src="/assets/img/Bild_20250301_024.webp" loading="lazy" alt="Treppenbau">
                 <div class="carousel-caption">
                     <h3>Treppenbau</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_011.jpg" loading="lazy" alt="Funktionaler Schrank">
+                <img src="/assets/img/Bild_20250301_009.webp" loading="lazy" alt="Funktionaler Schrank">
                 <div class="carousel-caption">
                     <h3>Funktionaler Schrank</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_012.jpg" loading="lazy" alt="Kücheninsel mit integrierter Bar">
+                <img src="/assets/img/Bild_20250301_005.webp" loading="lazy" alt="Kücheninsel mit integrierter Bar">
                 <div class="carousel-caption">
                     <h3>Kücheninsel mit integrierter Bar</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_013.jpg" loading="lazy" alt="Fassadenbau">
+                <img src="/assets/img/Bild_20250301_001.webp" loading="lazy" alt="Fassadenbau">
                 <div class="carousel-caption">
                     <h3>Fassadenbau</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_014.jpg" loading="lazy" alt="Sauna Fassade">
+                <img src="/assets/img/Bild_20250301_016.webp" loading="lazy" alt="Sauna Fassade">
                 <div class="carousel-caption">
                     <h3>Sauna Fassade</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_015.jpg" loading="lazy" alt="Tisch mit verkleideter Wand">
+                <img src="/assets/img/Bild_20250301_013.webp" loading="lazy" alt="Tisch mit verkleideter Wand">
                 <div class="carousel-caption">
                     <h3>Tisch mit verkleideter Wand</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_016.jpg" loading="lazy" alt="Holzliegen">
+                <img src="/assets/img/Bild_20250301_017.webp" loading="lazy" alt="Holzliegen">
                 <div class="carousel-caption">
                     <h3>Holzliegen</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_017.jpg" loading="lazy" alt="Metallgerüst Bett">
+                <img src="/assets/img/Bild_20250301_020.webp" loading="lazy" alt="Metallgerüst Bett">
                 <div class="carousel-caption">
                     <h3>Metallgerüst Bett</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_018.jpg" loading="lazy" alt="Treppenbau">
+                <img src="/assets/img/Bild_20250301_046.webp" loading="lazy" alt="Spezialwand">
                 <div class="carousel-caption">
-                    <h3>Treppenbau</h3>
+                    <h3>Spezialwand</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_019.jpg" loading="lazy" alt="Spielewände und Liegen">
+                <img src="/assets/img/Bild_20250301_026.webp" loading="lazy" alt="Spielewände und Liegen">
                 <div class="carousel-caption">
                     <h3>Spielewände und Liegen</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_020.jpg" loading="lazy" alt="Trampelpfad">
+                <img src="/assets/img/Bild_20250301_033.webp" loading="lazy" alt="Trampelpfad">
                 <div class="carousel-caption">
                     <h3>Trampelpfad</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_021.jpg" loading="lazy" alt="Saunafassade">
+                <img src="/assets/img/Bild_20250301_038.webp" loading="lazy" alt="Saunafassade">
                 <div class="carousel-caption">
                     <h3>Saunafassade</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_022.jpg" loading="lazy" alt="Theke mit integrierter Bar">
+                <img src="/assets/img/Bild_20250301_041.webp" loading="lazy" alt="Theke mit integrierter Bar">
                 <div class="carousel-caption">
                     <h3>Theke mit integrierter Bar</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_023.jpg" loading="lazy" alt="Spielwand">
+                <img src="/assets/img/Bild_20250301_040.webp" loading="lazy" alt="Spielwand">
                 <div class="carousel-caption">
                     <h3>Spielwand</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_024.jpg" loading="lazy" alt="Lampenelement mit verkleideter Wand">
+                <img src="/assets/img/Bild_20250301_030.webp" loading="lazy" alt="Lampenelement mit verkleideter Wand">
                 <div class="carousel-caption">
                     <h3>Lampenelement mit verkleideter Wand</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_025.jpg" loading="lazy" alt="Treppenverkleidung">
+                <img src="/assets/img/Bild_20250301_027.webp" loading="lazy" alt="Treppenverkleidung">
                 <div class="carousel-caption">
                     <h3>Treppenverkleidung</h3>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="/assets/img/Bild_20250227_026.jpg" loading="lazy" alt="Hallenausbau">
+                <img src="/assets/img/Bild_20250301_022.webp" loading="lazy" alt="Hallenausbau">
                 <div class="carousel-caption">
                     <h3>Hallenausbau</h3>
                 </div>
@@ -473,7 +670,7 @@
 
 <!-- CTA Section -->
 <section class="cta" id="kontakt">
-    <img src="assets/img/kontakt-img.jpg" loading="lazy" alt="Hintergrundbild" class="cta-bg">
+    <img src="assets/img/Bild_20250301_023.webp" loading="lazy" alt="Hintergrundbild" class="cta-bg">
     <div class="container">
         <div class="section-title">
             <h2>Ihr Projekt aus einer Hand</h2>
@@ -483,6 +680,78 @@
     </div>
 </section>
 
+<div class="preloader">
+    <div class="furniture-animation">
+        <!-- Cabinet -->
+        <svg class="cabinet" viewBox="0 0 240 240">
+            <defs>
+                <pattern id="woodPattern" patternUnits="userSpaceOnUse" width="30" height="30">
+                    <rect width="30" height="30" fill="var(--accent-color)"/>
+                    <path d="M0,7.5 Q7.5,0 15,7.5 T30,7.5 M0,22.5 Q7.5,15 15,22.5 T30,22.5" stroke="var(--light-accent)" stroke-width="1.5" fill="none"/>
+                    <path d="M15,0 Q12,7.5 15,15 T15,30" stroke="var(--primary-dark)" stroke-width="0.5" fill="none" opacity="0.3"/>
+                </pattern>
+            </defs>
+
+            <!-- Cabinet Body - Base -->
+            <rect class="cabinet-part part-1 wood-texture" x="40" y="70" width="160" height="140" rx="3"/>
+            <rect class="cabinet-part part-1 wood-edge" x="38" y="68" width="164" height="4" rx="1"/>
+            <rect class="cabinet-part part-1 wood-edge" x="38" y="72" width="4" height="140" rx="1"/>
+            <rect class="cabinet-part part-1 wood-edge" x="198" y="72" width="4" height="140" rx="1"/>
+            <rect class="cabinet-part part-1 wood-edge" x="38" y="212" width="164" height="2" rx="1"/>
+
+            <!-- Cabinet Top -->
+            <rect class="cabinet-part part-2 wood-texture" x="35" y="50" width="170" height="20" rx="3"/>
+            <rect class="cabinet-part part-2 wood-edge" x="33" y="48" width="174" height="4" rx="1"/>
+            <rect class="cabinet-part part-2 wood-edge" x="33" y="52" width="4" height="20" rx="1"/>
+            <rect class="cabinet-part part-2 wood-edge" x="203" y="52" width="4" height="20" rx="1"/>
+            <rect class="cabinet-part part-2 wood-edge" x="33" y="72" width="174" height="2" rx="1"/>
+
+            <!-- Cabinet Legs -->
+            <rect class="cabinet-part part-3 wood-texture-dark" x="50" y="210" width="20" height="12" rx="2"/>
+            <rect class="cabinet-part part-3 wood-texture-dark" x="170" y="210" width="20" height="12" rx="2"/>
+
+            <!-- Middle Shelf -->
+            <rect class="cabinet-part part-4 wood-texture" x="42" y="135" width="156" height="6" rx="1"/>
+
+            <!-- Drawer Top -->
+            <rect class="cabinet-part part-5 wood-texture" x="50" y="80" width="140" height="45" rx="2"/>
+            <circle class="cabinet-part handle-1 drawer-handle" cx="120" cy="102.5" r="6"/>
+            <circle class="cabinet-part handle-1" cx="120" cy="102.5" r="2" fill="var(--dark-color)"/>
+
+            <!-- Drawer Bottom -->
+            <rect class="cabinet-part part-6 wood-texture" x="50" y="150" width="140" height="45" rx="2"/>
+            <circle class="cabinet-part handle-2 drawer-handle" cx="120" cy="172.5" r="6"/>
+            <circle class="cabinet-part handle-2" cx="120" cy="172.5" r="2" fill="var(--dark-color)"/>
+
+            <!-- Cabinet Shadow -->
+            <ellipse class="cabinet-shadow" cx="120" cy="225" rx="90" ry="10"/>
+
+            <!-- Visible Nails -->
+            <circle class="nail" id="nail-1" cx="42" cy="74" r="0"/>
+            <circle class="nail" id="nail-2" cx="42" cy="208" r="0"/>
+            <circle class="nail" id="nail-3" cx="198" cy="74" r="0"/>
+            <circle class="nail" id="nail-4" cx="198" cy="208" r="0"/>
+            <circle class="nail" id="nail-5" cx="50" cy="135" r="0"/>
+            <circle class="nail" id="nail-6" cx="190" cy="135" r="0"/>
+            <circle class="nail" id="nail-7" cx="42" cy="55" r="0"/>
+            <circle class="nail" id="nail-8" cx="198" cy="55" r="0"/>
+        </svg>
+
+        <!-- Hammer Animation -->
+        <div class="hammer-container" id="hammer-container">
+            <svg class="hammer" viewBox="0 0 80 80">
+                <rect class="hammer-head" x="8" y="8" width="30" height="15" rx="3"/>
+                <rect class="hammer-handle" x="25" y="11" width="45" height="8" rx="4"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="loading-text">Handwerkskunst wird geladen...</div>
+</div>
 
 <div id="kontakt-popup" class="popup-overlay">
     <div class="popup-container">
@@ -551,7 +820,7 @@
                         <li><a href="#rechte-popup">3. Ihre Rechte</a></li>
                         <li><a href="#erhebung-popup">4. Erhebung von personenbezogenen Daten bei Besuch unserer Website</a></li>
                         <li><a href="#cookies-popup">5. Cookies und Webanalyse</a></li>
-                        <li><a href="#kontakt-popup">6. Kontaktformular und E-Mail-Kontakt</a></li>
+                        <li><a href="#kontaktds-popup">6. Kontaktformular und E-Mail-Kontakt</a></li>
                         <li><a href="#socialmedia-popup">7. Soziale Medien</a></li>
                         <li><a href="#aenderungen-popup">8. Änderungen der Datenschutzerklärung</a></li>
                     </ul>
@@ -565,7 +834,7 @@
                         Zum Weinberg 18<br>
                         02923 Horka<br>
                         Telefon: +49 1523 2034929<br>
-                        E-Mail: hannes.riedel2000@me.com
+                        E-Mail: info@holz-metall-riedel.de
                     </p>
                 </div>
 
@@ -624,7 +893,7 @@
                     <p>Diese Website nutzt derzeit keine Funktionen des Webanalysedienstes Google Analytics. Sollte sich dies ändern, werden wir diese Datenschutzerklärung entsprechend aktualisieren.</p>
                 </div>
 
-                <div id="kontakt-popup-section" class="section">
+                <div id="kontaktds-popup" class="section">
                     <h2>6. Kontaktformular und E-Mail-Kontakt</h2>
                     <p>Wenn Sie uns per Kontaktformular oder E-Mail kontaktieren, werden die von Ihnen mitgeteilten Daten (Ihre E-Mail-Adresse, ggf. Ihr Name und Ihre Telefonnummer) von uns gespeichert, um Ihre Fragen zu beantworten. Die in diesem Zusammenhang anfallenden Daten löschen wir, nachdem die Speicherung nicht mehr erforderlich ist, oder schränken die Verarbeitung ein, falls gesetzliche Aufbewahrungspflichten bestehen.</p>
                     <p>Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können diese Einwilligung jederzeit widerrufen. Dafür reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.</p>
@@ -674,6 +943,7 @@
                 <a href="#home">Home</a>
                 <a href="#about">Über mich</a>
                 <a href="#leistungen">Leistungen</a>
+                <a href="#einzugsgebiet">Einzugsgebiet</a>
                 <a href="#projektablauf">Projektablauf</a>
                 <a href="#referenzen">Referenzen</a>
                 <a href="#kontakt">Kontakt</a>
@@ -686,6 +956,9 @@
         </div>
     </div>
 </footer>
+
+<!-- Skripte -->
+<script src="/assets/js/content.js" defer></script>
 
 </body>
 </html>

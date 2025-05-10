@@ -9,23 +9,32 @@
 </head>
 <body>
 <!-- Header -->
-<header>
+<header class="header">
   <div class="container">
-    <div class="logo-nav">
-      <div class="logo">
+    <div class="header__wrapper">
+      <div class="header__logo">
         <a href="index.html">
-          <img src="/assets/img/Logo.png" alt="Holz-Metall-Riedel Logo">
+          <img src="/assets/img/Logo.png" loading="lazy" alt="Holz-Metall-Riedel Logo">
         </a>
       </div>
-      <button class="mobile-menu-btn">☰</button>
-      <nav>
-        <ul>
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#about">Über mich</a></li>
-          <li><a href="index.html#leistungen">Leistungen</a></li>
-          <li><a href="index.html#projektablauf">Projektablauf</a></li>
-          <li><a href="index.html#referenzen">Referenzen</a></li>
-          <li><a href="index.html#kontakt">Kontakt</a></li>
+
+      <button class="header__menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </span>
+      </button>
+
+      <nav class="nav" aria-hidden="true">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html#home" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="index.html#about" class="nav__link">Über mich</a></li>
+          <li class="nav__item"><a href="index.html#leistungen" class="nav__link">Leistungen</a></li>
+          <li class="nav__item"><a href="index.html#einzugsgebiet" class="nav__link">Einzugsgebiet</a></li>
+          <li class="nav__item"><a href="index.html#projektablauf" class="nav__link">Projektablauf</a></li>
+          <li class="nav__item"><a href="index.html#referenzen" class="nav__link">Referenzen</a></li>
+          <li class="nav__item"><a href="index.html#kontakt" class="nav__link">Kontakt</a></li>
         </ul>
       </nav>
     </div>
@@ -58,7 +67,7 @@
       </div>
       <div class="contact-item">
         <span class="contact-label">E-Mail:</span>
-        <span>hannes.riedel2000@me.com</span>
+        <span>info@holz-metall-riedel.de</span>
       </div>
     </div>
 
@@ -115,6 +124,7 @@
         <a href="index.html#home">Home</a>
         <a href="index.html#about">Über mich</a>
         <a href="index.html#leistungen">Leistungen</a>
+        <a href="index.html#einzugsgebiet">Einzugsgebiet</a>
         <a href="index.html#projektablauf">Projektablauf</a>
         <a href="index.html#referenzen">Referenzen</a>
         <a href="index.html#kontakt">Kontakt</a>
