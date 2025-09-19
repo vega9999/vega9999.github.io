@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bau GmbH Franke - Ihr regionaler Baupartner seit 1991 | Hainewalde</title>
+    <meta name="description" content="Die Bau GmbH Franke aus Hainewalde ist Ihr erfahrener Partner für Tiefbau, Hochbau, Straßenbau und Bauvermessung. 33 Jahre Expertise mit 85 qualifizierten Mitarbeitern.">
+    <meta name="keywords" content="Bauunternehmen Hainewalde, Tiefbau Sachsen, Kanalbau Görlitz, Hausbau Oberlausitz, DVGW zertifiziert">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/dark-mode.css">
+    <link rel="stylesheet" href="/assets/css/popup-modal.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/construction_animations.css">
+    <link rel="stylesheet" href="/assets/css/angebots-tool.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Bau GmbH Franke",
+            "description": "Bauunternehmen für Tiefbau, Hochbau, Straßenbau und Bauvermessung",
+            "url": "https://www.baufranke.de",
+            "telephone": "+49-35841-3190",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Scheibe 17",
+                "addressLocality": "Hainewalde",
+                "postalCode": "02779",
+                "addressCountry": "DE"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "51.0504",
+                "longitude": "14.7372"
+            },
+            "foundingDate": "1991",
+            "numberOfEmployees": "85",
+            "areaServed": "Sachsen, Oberlausitz"
+        }
+    </script>
+
+    <script src="https://liracore.onrender.com/js/cookie-banner.js"></script>
+    <script src="https://liracore.onrender.com/static/js/accessibility-widget.js"></script>
+</head>
+<body>
+<!-- Header -->
+<header class="header sticky-header">
+    <div class="nav-container">
+        <div class="logo">
+            <img id="logo" src="/assets/images/hero/FrankeBau_Logo.png" alt="Bau GmbH Franke Logo">
+        </div>
+
+        <nav class="nav-menu" id="nav-menu">
+            <a href="index.html" class="nav-link active">Startseite</a>
+            <a href="ueber-uns.html" class="nav-link">Über uns</a>
+            <div class="dropdown">
+                <a href="leistungen.html" class="nav-link">Leistungen</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tiefbau.html">Tiefbau</a></li>
+                    <li><a href="hochbau.html">Hochbau</a></li>
+                    <li><a href="strassenbau.html">Straßenbau</a></li>
+                    <li><a href="bauvermessung.html">Bauvermessung</a></li>
+                    <li><a href="landwirtschaftsbau.html">Landwirtschaftsbau</a></li>
+                </ul>
+            </div>
+            <a href="materialverkauf.html" class="nav-link">Materialverkauf</a>
+            <a href="referenzen.html" class="nav-link">Referenzen</a>
+            <a href="karriere.html" class="nav-link">Karriere</a>
+            <a href="kontakt.html" class="nav-link">Kontakt</a>
+            <a href="angebots-tool.html" class="nav-link nav-link-highlight">Kostenloses Angebot</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Dark Mode umschalten">
+                <img id="dark-mode-icon" src="/assets/images/icons/Icon_FrankeBau_DarkMode.png" alt="Dark Mode Icon" width="24" height="24">
+            </button>
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<button id="scrollToTop" class="scroll-top">
+    ↑
+</button>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-background">
+        <img src="/assets/images/hero/baustelle-hero-1920x1080.webp" alt="Moderne Baustelle mit GPS-gesteuerten Baumaschinen" class="hero-image">
+    </div>
+    <div class="hero-content">
+        <h1 class="hero-title">Ihr regionaler Baupartner seit 1991</h1>
+        <p class="hero-subtitle">Moderne Technik trifft Familientradition - 85 Experten für Ihr Bauvorhaben in Sachsen und der Oberlausitz</p>
+        <div class="hero-actions">
+            <button data-modal-trigger="contact-modal" class="btn btn-primary btn-large">Kostenloses Angebot anfordern</button>
+            <a href="tel:+4935841-3190" class="btn btn-outline btn-large">Jetzt anrufen: 035841-3190</a>
+        </div>
+    </div>
+
+    <!-- Animierter Scroll Button -->
+    <div class="scroll-indicator">
+        <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Unternehmensvorstellung -->
+<section class="section-padding">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-content">
+                <h2>33 Jahre Erfahrung im Familienbetrieb</h2>
+                <p class="lead">Als etabliertes Familienunternehmen sind wir seit über drei Jahrzehnten Ihr verlässlicher Partner für alle Bauvorhaben in der Region Sachsen.</p>
+                <p>Mit 85 qualifizierten Mitarbeitern und modernster Technik wie GPS-gesteuerten Baumaschinen und Tiltrotatoren realisieren wir Projekte von der ersten Planung bis zur schlüsselfertigen Übergabe.</p>
+
+                <div class="key-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-content">
+                            <h3>Vollspektrum-Anbieter</h3>
+                            <p>Von Tiefbau bis Hochbau - alles aus einer Hand für Ihr Bauvorhaben.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-content">
+                            <h3>Modernste Technik</h3>
+                            <p>GPS-Steuerung und innovative Baumaschinen für präzise Arbeitsergebnisse.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-content">
+                            <h3>Zertifizierte Qualität</h3>
+                            <p>DVGW-Zertifizierung und VOB-Präqualifizierung garantieren höchste Standards.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="ueber-uns.html" class="btn btn-secondary">Mehr über uns erfahren</a>
+            </div>
+            <div class="intro-image">
+                <img src="/assets/images/hero/Placeholder.jpg" alt="Team der Bau GmbH Franke vor modernen Baumaschinen" width="500" height="400">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Leistungsvorschau -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Unsere Leistungen für Ihr Bauvorhaben</h2>
+            <p class="section-subtitle">Kompetenz in allen Bereichen - von der Fundamentlegung bis zum Dachstuhl</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Tiefbau Icon" width="60" height="60">
+                </div>
+                <h3>Tiefbau</h3>
+                <p>Erdbau, Kanalbau und Rohrleitungsbau mit GPS-gesteuerten Maschinen für präzise Ergebnisse.</p>
+                <a href="tiefbau.html" class="service-link">
+                    Mehr erfahren →
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Hochbau Icon" width="60" height="60">
+                </div>
+                <h3>Hochbau</h3>
+                <p>Betonbau, Maurerarbeiten und Ingenieurbau - solide Fundamente für Ihr Eigenheim.</p>
+                <a href="hochbau.html" class="service-link">
+                    Mehr erfahren →
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Straßenbau Icon" width="60" height="60">
+                </div>
+                <h3>Straßenbau</h3>
+                <p>Asphaltbau, Pflasterbau und Wegebau für Zufahrten und private Verkehrsflächen.</p>
+                <a href="strassenbau.html" class="service-link">
+                    Mehr erfahren →
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Bauvermessung Icon" width="60" height="60">
+                </div>
+                <h3>Bauvermessung</h3>
+                <p>Präzise Vermessungsarbeiten mit modernster GPS-Technik für perfekte Bauausführung.</p>
+                <a href="bauvermessung.html" class="service-link">
+                    Mehr erfahren →
+                </a>
+            </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+            <a href="leistungen.html" class="btn btn-primary">Alle Leistungen ansehen</a>
+        </div>
+    </div>
+</section>
+
+<!-- Projektpunkte Karte -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Aktuelle Projekte in der Oberlausitz</h2>
+            <p class="section-subtitle">Entdecken Sie unsere neuesten Bauprojekte in der gesamten Region</p>
+        </div>
+
+        <!-- Projekt Legende -->
+        <div class="project-legend">
+            <h3>Unsere Referenzprojekte</h3>
+            <div class="legend-grid">
+                <div class="legend-item" onclick="focusOnProject(0)">
+                    <div class="legend-marker">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                        </svg>
+                    </div>
+                    <div class="legend-content">
+                        <h4>Kanalsanierung Görlitzer Altstadt</h4>
+                        <p class="legend-location">Görlitz, Sachsen</p>
+                        <p class="legend-category">Tiefbau • 2023</p>
+                        <p class="legend-description">Umfassende Sanierung des historischen Kanalnetzes auf 2,8 km Länge</p>
+                    </div>
+                </div>
+
+                <div class="legend-item" onclick="focusOnProject(1)">
+                    <div class="legend-marker">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                        </svg>
+                    </div>
+                    <div class="legend-content">
+                        <h4>Wohnpark Zittau-Süd</h4>
+                        <p class="legend-location">Zittau, Sachsen</p>
+                        <p class="legend-category">Hochbau • 2024</p>
+                        <p class="legend-description">32 Wohneinheiten in energieeffizientem KfW40-Standard</p>
+                    </div>
+                </div>
+
+                <div class="legend-item" onclick="focusOnProject(2)">
+                    <div class="legend-marker">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                        </svg>
+                    </div>
+                    <div class="legend-content">
+                        <h4>Hauptstraßensanierung Löbau</h4>
+                        <p class="legend-location">Löbau, Sachsen</p>
+                        <p class="legend-category">Straßenbau • 2023</p>
+                        <p class="legend-description">Vollständige Sanierung der Hauptverkehrsachse auf 1,9 km</p>
+                    </div>
+                </div>
+
+                <div class="legend-item" onclick="focusOnProject(3)">
+                    <div class="legend-marker">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                        </svg>
+                    </div>
+                    <div class="legend-content">
+                        <h4>Gewerbegebiet Bautzen-Nord</h4>
+                        <p class="legend-location">Bautzen, Sachsen</p>
+                        <p class="legend-category">Tiefbau • 2022</p>
+                        <p class="legend-description">Erschließung von 6,8 ha für 12 Gewerbeparzellen</p>
+                    </div>
+                </div>
+
+                <div class="legend-item" onclick="focusOnProject(4)">
+                    <div class="legend-marker">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                        </svg>
+                    </div>
+                    <div class="legend-content">
+                        <h4>Neisseuferweg Dresden-Neustadt</h4>
+                        <p class="legend-location">Dresden, Sachsen</p>
+                        <p class="legend-category">Straßenbau • 2024</p>
+                        <p class="legend-description">2,1 km hochwassersicherer Uferweg mit ökologischer Befestigung</p>
+                    </div>
+                </div>
+
+                <div class="legend-item" onclick="focusOnProject(5)">
+                    <div class="legend-marker">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                        </svg>
+                    </div>
+                    <div class="legend-content">
+                        <h4>Grundschule Hainewalde Neubau</h4>
+                        <p class="legend-location">Hainewalde, Sachsen</p>
+                        <p class="legend-category">Hochbau • 2024</p>
+                        <p class="legend-description">Neubau für 180 Schüler in KfW40-Standard mit Photovoltaik</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Karte Container -->
+        <div class="project-map-container">
+            <div id="project-map" class="project-map" role="application" aria-label="Interaktive Karte mit Bauprojekten"></div>
+        </div>
+
+        <!-- Versteckte Projektdaten für SEO -->
+        <div class="project-data" style="display: none;">
+            <!-- Projekt 1: Kanalbau Görlitz -->
+            <article class="project-item"
+                     data-lat="51.1558"
+                     data-lng="14.9878"
+                     data-title="Kanalsanierung Görlitzer Altstadt"
+                     data-category="Tiefbau"
+                     data-year="2023"
+                     data-location="Görlitz, Sachsen">
+                <h3>Kanalsanierung Görlitzer Altstadt</h3>
+                <p class="project-description">
+                    Umfassende Sanierung des historischen Kanalnetzes in der Görlitzer Altstadt.
+                    Auf einer Gesamtlänge von 2,8 Kilometern wurden behutsam moderne Rohrleitungen
+                    unter Denkmalschutzauflagen verlegt. Das Projekt umfasste sowohl Schmutz- als
+                    auch Regenwasserleitungen sowie die Installation moderner Kontrollschächte mit
+                    digitaler Überwachungstechnik. Besondere Herausforderung war die Arbeitsausführung
+                    in den engen Gassen der UNESCO-Welterbestadt ohne Beschädigung der historischen Bausubstanz.
+                </p>
+                <div class="project-images">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Kanalbau Görlitz - Rohrleitungsverlegung" data-caption="Präzise Rohrleitungsverlegung in historischem Umfeld">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Kanalbau Görlitz - Kontrollschacht" data-caption="Installation moderner Kontrollschächte">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Kanalbau Görlitz - Altstadt" data-caption="Arbeiten in der historischen Altstadt">
+                </div>
+                <div class="project-details">
+                    <span class="project-detail">Kategorie: Tiefbau</span>
+                    <span class="project-detail">Jahr: 2023</span>
+                    <span class="project-detail">Umfang: 2,8 km Kanalnetz</span>
+                </div>
+            </article>
+
+            <!-- Projekt 2: Wohnanlage Zittau -->
+            <article class="project-item"
+                     data-lat="50.8995"
+                     data-lng="14.8089"
+                     data-title="Wohnpark Zittau-Süd"
+                     data-category="Hochbau"
+                     data-year="2024"
+                     data-location="Zittau, Sachsen">
+                <h3>Wohnpark Zittau-Süd</h3>
+                <p class="project-description">
+                    Neubau einer modernen Wohnanlage mit 32 Wohneinheiten in Zittau-Süd mit
+                    Blick auf das Zittauer Gebirge. Das Projekt umfasste drei Gebäudekomplexe
+                    mit energieeffizientem Baustandard KfW40. Neben den Wohngebäuden wurden
+                    eine Tiefgarage mit 40 Stellplätzen sowie Außenanlagen mit Kinderspielplatz
+                    und Grünflächen realisiert. Besonderes Augenmerk lag auf nachhaltigen
+                    Baumaterialien und einer Photovoltaikanlage auf allen Dächern.
+                </p>
+                <div class="project-images">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Wohnanlage Zittau - Rohbau" data-caption="Rohbauarbeiten mit Blick auf das Zittauer Gebirge">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Wohnanlage Zittau - Tiefgarage" data-caption="Bau der Tiefgarage mit 40 Stellplätzen">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Wohnanlage Zittau - Photovoltaik" data-caption="Installation der Photovoltaikanlage">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Wohnanlage Zittau - Fertigstellung" data-caption="Fertige Wohnanlage mit Außenanlagen">
+                </div>
+                <div class="project-details">
+                    <span class="project-detail">Kategorie: Hochbau</span>
+                    <span class="project-detail">Jahr: 2024</span>
+                    <span class="project-detail">Umfang: 32 Wohneinheiten, KfW40 Standard</span>
+                </div>
+            </article>
+
+            <!-- Projekt 3: Straßenbau Löbau -->
+            <article class="project-item"
+                     data-lat="51.0998"
+                     data-lng="14.6648"
+                     data-title="Hauptstraßensanierung Löbau"
+                     data-category="Straßenbau"
+                     data-year="2023"
+                     data-location="Löbau, Sachsen">
+                <h3>Hauptstraßensanierung Löbau</h3>
+                <p class="project-description">
+                    Vollständige Sanierung der Hauptverkehrsachse in Löbau auf einer Länge von
+                    1,9 Kilometern. Das Projekt beinhaltete den kompletten Rückbau der alten
+                    Fahrbahn, Erneuerung der Tragschicht sowie den Aufbau einer neuen Asphaltdecke.
+                    Zusätzlich wurden Rad- und Gehwege neugestaltet, eine moderne LED-Beleuchtung
+                    installiert und barrierefreie Übergänge geschaffen. Die Arbeiten erfolgten
+                    unter laufendem Verkehr in vier Bauabschnitten.
+                </p>
+                <div class="project-images">
+                    <img src="/assets/images/projects/strasse-loebau-1.jpg" alt="Straßenbau Löbau - Rückbau" data-caption="Rückbau der alten Straßendecke">
+                    <img src="/assets/images/projects/strasse-loebau-2.jpg" alt="Straßenbau Löbau - Asphaltierung" data-caption="Asphaltierung mit GPS-gesteuerten Maschinen">
+                    <img src="/assets/images/projects/strasse-loebau-3.jpg" alt="Straßenbau Löbau - LED-Beleuchtung" data-caption="Installation der neuen LED-Beleuchtung">
+                </div>
+                <div class="project-details">
+                    <span class="project-detail">Kategorie: Straßenbau</span>
+                    <span class="project-detail">Jahr: 2023</span>
+                    <span class="project-detail">Umfang: 1,9 km Hauptverkehrsachse</span>
+                </div>
+            </article>
+
+            <!-- Projekt 4: Gewerbegebiet Bautzen -->
+            <article class="project-item"
+                     data-lat="51.1804"
+                     data-lng="14.4270"
+                     data-title="Gewerbegebiet Bautzen-Nord"
+                     data-category="Tiefbau"
+                     data-year="2022"
+                     data-location="Bautzen, Sachsen">
+                <h3>Gewerbegebiet Bautzen-Nord</h3>
+                <p class="project-description">
+                    Erschließung eines neuen Gewerbegebiets in Bautzen-Nord für 12 Gewerbeparzellen.
+                    Das Projekt umfasste die komplette Infrastrukturerstellung mit Straßenbau,
+                    Ver- und Entsorgungsleitungen sowie Regenwassermanagement. Auf einer Fläche
+                    von 6,8 Hektar wurden alle erforderlichen Leitungen verlegt, Straßen gebaut
+                    und Grünanlagen angelegt. Besondere Herausforderung war die Anbindung an das
+                    bestehende Verkehrs- und Leitungsnetz der Spreemetropole.
+                </p>
+                <div class="project-images">
+                    <img src="/assets/images/projects/gewerbe-bautzen-1.jpg" alt="Gewerbegebiet Bautzen - Erdarbeiten" data-caption="Umfangreiche Erdarbeiten für die Erschließung">
+                    <img src="/assets/images/projects/gewerbe-bautzen-2.jpg" alt="Gewerbegebiet Bautzen - Leitungsbau" data-caption="Verlegung der Ver- und Entsorgungsleitungen">
+                    <img src="/assets/images/projects/gewerbe-bautzen-3.jpg" alt="Gewerbegebiet Bautzen - Straßenbau" data-caption="Straßenbau mit präziser GPS-Steuerung">
+                    <img src="/assets/images/projects/gewerbe-bautzen-4.jpg" alt="Gewerbegebiet Bautzen - Fertigstellung" data-caption="Fertiggestelltes Gewerbegebiet mit Grünanlagen">
+                </div>
+                <div class="project-details">
+                    <span class="project-detail">Kategorie: Tiefbau</span>
+                    <span class="project-detail">Jahr: 2022</span>
+                    <span class="project-detail">Umfang: 6,8 ha Gewerbefläche</span>
+                </div>
+            </article>
+
+            <!-- Projekt 5: Neisseuferweg Dresden -->
+            <article class="project-item"
+                     data-lat="51.0504"
+                     data-lng="13.7373"
+                     data-title="Neisseuferweg Dresden-Neustadt"
+                     data-category="Straßenbau"
+                     data-year="2024"
+                     data-location="Dresden, Sachsen">
+                <h3>Neisseuferweg Dresden-Neustadt</h3>
+                <p class="project-description">
+                    Neubau eines 2,1 Kilometer langen Uferwegs entlang der Neiße in Dresden-Neustadt.
+                    Das Projekt umfasste den Bau eines kombinierten Rad- und Gehwegs mit
+                    hochwassersicherer Bauweise und ökologischen Uferbefestigungen.
+                    Neben dem Wegebau wurden auch Aussichtsplattformen, Ruhebänke und eine
+                    naturnahe Beleuchtung installiert. Umweltschutzmaßnahmen wie Fischaufstiegshilfen
+                    und Biotopverbesserungen wurden ebenfalls realisiert.
+                </p>
+                <div class="project-images">
+                    <img src="/assets/images/projects/uferweg-dresden-1.jpg" alt="Uferweg Dresden - Wegebau" data-caption="Bau des hochwassersicheren Uferwegs">
+                    <img src="/assets/images/projects/uferweg-dresden-2.jpg" alt="Uferweg Dresden - Uferbefestigung" data-caption="Ökologische Uferbefestigung">
+                    <img src="/assets/images/projects/uferweg-dresden-3.jpg" alt="Uferweg Dresden - Aussichtsplattform" data-caption="Installation der Aussichtsplattformen">
+                    <img src="/assets/images/projects/uferweg-dresden-4.jpg" alt="Uferweg Dresden - Fertigstellung" data-caption="Fertiggestellter Uferweg mit Beleuchtung">
+                </div>
+                <div class="project-details">
+                    <span class="project-detail">Kategorie: Straßenbau</span>
+                    <span class="project-detail">Jahr: 2024</span>
+                    <span class="project-detail">Umfang: 2,1 km Uferweg</span>
+                </div>
+            </article>
+
+            <!-- Projekt 6: Schulkomplex Hainewalde -->
+            <article class="project-item"
+                     data-lat="51.0504"
+                     data-lng="14.7372"
+                     data-title="Grundschule Hainewalde Neubau"
+                     data-category="Hochbau"
+                     data-year="2024"
+                     data-location="Hainewalde, Sachsen">
+                <h3>Grundschule Hainewalde Neubau</h3>
+                <p class="project-description">
+                    Neubau der Grundschule Hainewalde für 180 Schüler mit modernster Ausstattung
+                    und nachhaltiger Bauweise. Das zweigeschossige Gebäude wurde in Holz-Beton-Hybridbauweise
+                    errichtet und erfüllt den KfW40-Standard. Der Schulkomplex umfasst 8 Klassenräume,
+                    eine Mensa, Sporthalle, Bibliothek und Außenanlagen mit Pausenhof und Schulgarten.
+                    Eine eigene Photovoltaikanlage und Regenwasserzisternen sorgen für Nachhaltigkeit.
+                    Alle Materialien wurden regional beschafft und auf Schadstofffreiheit geprüft.
+                </p>
+                <div class="project-images">
+                    <img src="/assets/images/projects/schule-hainewalde-1.jpg" alt="Schule Hainewalde - Grundsteinlegung" data-caption="Grundsteinlegung für die neue Grundschule">
+                    <img src="/assets/images/projects/schule-hainewalde-2.jpg" alt="Schule Hainewalde - Rohbau" data-caption="Holz-Beton-Hybridbauweise im Rohbau">
+                    <img src="/assets/images/projects/schule-hainewalde-3.jpg" alt="Schule Hainewalde - Sporthalle" data-caption="Bau der modernen Sporthalle">
+                    <img src="/assets/images/projects/schule-hainewalde-4.jpg" alt="Schule Hainewalde - Photovoltaik" data-caption="Installation der Photovoltaikanlage">
+                    <img src="/assets/images/projects/schule-hainewalde-5.jpg" alt="Schule Hainewalde - Fertigstellung" data-caption="Fertiggestellter Schulkomplex mit Außenanlagen">
+                </div>
+                <div class="project-details">
+                    <span class="project-detail">Kategorie: Hochbau</span>
+                    <span class="project-detail">Jahr: 2024</span>
+                    <span class="project-detail">Umfang: 180 Schüler, KfW40 Standard</span>
+                </div>
+            </article>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+            <a href="referenzen.html" class="btn btn-secondary">Alle Referenzen ansehen</a>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-backdrop" aria-label="Schließen"></div>
+    <div class="lightbox-container">
+        <button class="lightbox-close" aria-label="Lightbox schließen">×</button>
+        <button class="lightbox-prev" aria-label="Vorheriges Bild">‹</button>
+        <button class="lightbox-next" aria-label="Nächstes Bild">›</button>
+        <div class="lightbox-content">
+            <img class="lightbox-image" src="" alt="" />
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Kontaktbereich -->
+<section class="contact-section section-padding">
+    <!-- Hintergrundbild als HTML Element -->
+    <div class="contact-background">
+        <img src="/assets/images/hero/FrankeBau_Footer1.jpg"
+             alt="Baustellenaufnahme im Hintergrund"
+             class="contact-bg-image">
+    </div>
+
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Blur Box für Kontakt-Info -->
+            <div class="contact-info blur-box">
+                <h2>Sprechen Sie mit unseren Experten</h2>
+                <p>Lassen Sie uns gemeinsam Ihr Bauvorhaben planen. Unsere erfahrenen Bauleiter beraten Sie gerne persönlich und unverbindlich.</p>
+
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Telefon</h4>
+                            <a href="tel:+4935841-3190">035841-3190</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>E-Mail</h4>
+                            <a href="mailto:info@baufranke.de">info@baufranke.de</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>Hauptstraße 123<br>02779 Hainewalde</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Öffnungszeiten</h4>
+                            <p>Mo-Fr: 7:00-17:00 Uhr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blur Box für Karte -->
+            <div class="map-wrapper">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.123456789!2d14.7372!3d51.0504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDAzJzAxLjQiTiAxNMKwNDQnMTQuMCJF!5e0!3m2!1sde!2sde!4v1234567890123!5m2!1sde!2sde"
+                            width="100%"
+                            height="350"
+                            style="border:0; border-radius: 12px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Bau GmbH Franke</h4>
+                <p>Ihr regionaler Baupartner seit 1991. Moderne Technik trifft Familientradition - für Bauvorhaben in Sachsen und der Oberlausitz.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Leistungen</h4>
+                <ul>
+                    <li><a href="tiefbau.html">Tiefbau</a></li>
+                    <li><a href="hochbau.html">Hochbau</a></li>
+                    <li><a href="strassenbau.html">Straßenbau</a></li>
+                    <li><a href="bauvermessung.html">Bauvermessung</a></li>
+                    <li><a href="landwirtschaftsbau.html">Landwirtschaftsbau</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Unternehmen</h4>
+                <ul>
+                    <li><a href="ueber-uns.html">Über uns</a></li>
+                    <li><a href="referenzen.html">Referenzen</a></li>
+                    <li><a href="karriere.html">Karriere</a></li>
+                    <li><a href="bescheinigungen.html">Bescheinigungen</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-contact">
+                <h4>Kontakt</h4>
+                <p>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    035841-3190
+                </p>
+                <p>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    info@baufranke.de
+                </p>
+                <p>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    Scheibe 17<br>02779 Hainewalde
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bau GmbH Franke. Alle Rechte vorbehalten.</p>
+            <div class="footer-legal">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Contact Modal -->
+<div id="contact-modal" class="modal-overlay">
+    <div class="modal modal-medium">
+        <div class="modal-header">
+            <h3 class="modal-title">Unverbindliches Angebot anfordern</h3>
+            <button class="modal-close" aria-label="Modal schließen"></button>
+        </div>
+        <div class="modal-body">
+            <form id="contact-form" class="contact-form" action="/assets/php/contact-handler.php" method="POST">
+                <input type="hidden" name="page_type" value="index">
+                <input type="text" name="website" style="display: none;">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="vorname">Vorname *</label>
+                        <input type="text" id="vorname" name="vorname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nachname">Nachname *</label>
+                        <input type="text" id="nachname" name="nachname" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">E-Mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefon">Telefon</label>
+                        <input type="tel" id="telefon" name="telefon">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="leistung">Gewünschte Leistung</label>
+                    <select id="leistung" name="leistung">
+                        <option value="">Bitte wählen</option>
+                        <option value="tiefbau">Tiefbau</option>
+                        <option value="hochbau">Hochbau</option>
+                        <option value="strassenbau">Straßenbau</option>
+                        <option value="bauvermessung">Bauvermessung</option>
+                        <option value="landwirtschaftsbau">Landwirtschaftsbau</option>
+                        <option value="sonstiges">Sonstiges</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nachricht">Projektbeschreibung *</label>
+                    <textarea id="nachricht" name="nachricht" rows="4" placeholder="Beschreiben Sie kurz Ihr Bauvorhaben..." required></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="datenschutz" required>
+                        <span class="checkmark"></span>
+                        Ich stimme der <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> zu. *
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Angebot anfordern</button>
+                    <button type="button" class="btn btn-outline" data-modal-close="contact-modal">Abbrechen</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Projekt-Modal -->
+<div id="project-modal" class="project-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="project-modal-backdrop"></div>
+    <div class="project-modal-container">
+        <div class="project-modal-header">
+            <h2 id="project-modal-title" class="project-modal-title"></h2>
+            <button class="project-modal-close" aria-label="Projekt-Details schließen">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="project-modal-content">
+            <div class="project-modal-images">
+                <div class="project-image-main">
+                    <img id="project-modal-main-image" src="" alt="" />
+                    <button class="project-nav-btn project-prev-btn" aria-label="Vorheriges Bild">‹</button>
+                    <button class="project-nav-btn project-next-btn" aria-label="Nächstes Bild">›</button>
+                </div>
+                <div class="project-image-thumbnails" id="project-modal-thumbnails">
+
+                </div>
+            </div>
+
+            <div class="project-modal-info">
+                <div class="project-modal-meta" id="project-modal-meta">
+
+                </div>
+
+                <div class="project-modal-description" id="project-modal-description">
+
+                </div>
+
+                <div class="project-modal-details" id="project-modal-details">
+
+                </div>
+
+                <div class="project-modal-actions">
+                    <a href="referenzen.html" class="btn btn-primary">Alle Referenzen ansehen</a>
+                    <button data-modal-trigger="contact-modal" class="btn btn-outline">Anfrage senden</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="/assets/js/universal-toast.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/animations.js"></script>
+<script src="/assets/js/popup-modal.js"></script>
+<script src="/assets/js/lazy-loading.js"></script>
+</body>
+</html>
+

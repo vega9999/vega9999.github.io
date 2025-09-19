@@ -1,0 +1,22 @@
+<!-- python/jobs/job_template.html -->
+<div class="job-card" data-job-id="{{id}}">
+    <div class="job-header">
+        <h3>{{title}}</h3>
+        <span class="job-type">{{type}}</span>
+    </div>
+    <div class="job-details">
+        <p><strong>Unternehmen:</strong> {{company}}</p>
+        <p><strong>Standort:</strong> {{location}}</p>
+        <p><strong>Bereich:</strong> {{department}}</p>
+        <p><strong>Veröffentlicht:</strong> {{published}}</p>
+    </div>
+    <div class="job-description">
+        <p>{{description}}</p>
+    </div>
+    <div class="job-actions">
+        <button class="btn btn-primary" onclick="openBewerbungModal('{{title}}')">Jetzt bewerben</button>
+        {{#if link}}
+        <a href="{{link}}" class="btn btn-outline" target="_blank" rel="noopener">Details ansehen</a>
+        {{/if}}
+    </div>
+</div>

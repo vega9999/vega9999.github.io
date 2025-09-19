@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materialverkauf & Sonderposten - Bau GmbH Franke | Hainewalde</title>
+    <meta name="description" content="Hochwertige Baustoffe direkt vom Hersteller: Sand, Kies, Schotter, Beton, Pflastersteine. Lieferservice in der Oberlausitz. Günstige Preise, Abholung möglich.">
+    <meta name="keywords" content="Materialverkauf Hainewalde, Baustoffe Oberlausitz, Sand Kies Görlitz, Schotter Lieferung, Beton Sachsen, Pflastersteine kaufen">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/dark-mode.css">
+    <link rel="stylesheet" href="/assets/css/popup-modal.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Store",
+            "name": "Bau GmbH Franke - Materialverkauf",
+            "description": "Materialverkauf für Baustoffe, Sand, Kies, Schotter und Pflastersteine",
+            "url": "https://www.baufranke.de/materialverkauf.html",
+            "telephone": "+49-35841-3190",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Hauptstraße 123",
+                "addressLocality": "Hainewalde",
+                "postalCode": "02779",
+                "addressCountry": "DE"
+            },
+            "openingHours": "Mo-Fr 07:00-17:00",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Baustoffe und Materialien",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Product",
+                            "name": "Sand & Kies",
+                            "category": "Baustoffe"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Product",
+                            "name": "Schotter & Splitt",
+                            "category": "Baustoffe"
+                        }
+                    }
+                ]
+            }
+        }
+    </script>
+
+    <script src="https://liracore.onrender.com/js/cookie-banner.js"></script>
+    <script src="https://liracore.onrender.com/static/js/accessibility-widget.js"></script>
+
+    <style>
+        /* Zusätzliche Styles für Materialverkauf */
+        .material-hero {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--bg-dark) 100%);
+            color: white;
+            padding: calc(var(--spacing-3xl) + 60px) 0 var(--spacing-2xl) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .material-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('/assets/images/hero/Placeholder.jpg') center/cover;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        .material-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .material-hero h1 {
+            color: white;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .breadcrumb {
+            background: var(--bg-light);
+            padding: var(--spacing-md) 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .breadcrumb ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .breadcrumb li::after {
+            content: '›';
+            margin-left: var(--spacing-sm);
+            color: var(--text-secondary-dark);
+        }
+
+        .breadcrumb li:last-child::after {
+            display: none;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .material-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .material-category {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            transition: all var(--transition-base);
+            border: 1px solid var(--border-light);
+            position: relative;
+        }
+
+        .material-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green), var(--accent-green));
+        }
+
+        .material-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-image {
+            height: 200px;
+            background: var(--bg-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-base);
+        }
+
+        .material-category:hover .category-image img {
+            transform: scale(1.05);
+        }
+
+        .category-badge {
+            position: absolute;
+            top: var(--spacing-md);
+            right: var(--spacing-md);
+            background: var(--secondary-orange);
+            color: white;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-xl);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .category-content {
+            padding: var(--spacing-xl);
+        }
+
+        .category-content h3 {
+            color: var(--primary-green);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.5rem;
+        }
+
+        .category-features {
+            list-style: none;
+            padding: 0;
+            margin: var(--spacing-md) 0;
+        }
+
+        .category-features li {
+            position: relative;
+            padding: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-lg);
+            color: var(--text-secondary-dark);
+            font-size: 0.9rem;
+        }
+
+        .category-features li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: var(--accent-green);
+            border-radius: 50%;
+        }
+
+        .price-preview {
+            background: var(--bg-light);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-md) 0;
+            border: 1px solid var(--border-light);
+        }
+
+        .price-preview .price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .price-preview .unit {
+            font-size: 0.85rem;
+            color: var(--text-secondary-dark);
+            margin-left: var(--spacing-xs);
+        }
+
+        .price-tables {
+            display: grid;
+            gap: var(--spacing-2xl);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .price-table-container {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+        }
+
+        .price-table-header {
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+            color: white;
+            padding: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .price-table-header h3 {
+            color: white;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+        }
+
+        .price-table th,
+        .price-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .price-table th {
+            background: var(--bg-light);
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .price-table tr:hover {
+            background: var(--bg-light);
+        }
+
+        .price-cell {
+            font-weight: 600;
+            color: var(--primary-green);
+            font-size: 1.1rem;
+        }
+
+        .availability-badge {
+            display: inline-block;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-xl);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .available {
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--accent-green);
+            border: 1px solid var(--accent-green);
+        }
+
+        .limited {
+            background: rgba(217, 119, 6, 0.1);
+            color: var(--secondary-orange);
+            border: 1px solid var(--secondary-orange);
+        }
+
+        .unavailable {
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+            border: 1px solid #ef4444;
+        }
+
+        .service-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .service-info-card {
+            background: white;
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-base);
+        }
+
+        .service-info-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .service-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        .service-info-card h3 {
+            color: var(--primary-green);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-list li {
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .info-value {
+            color: var(--text-secondary-dark);
+            font-weight: 600;
+        }
+
+        .calculator-section {
+            background: var(--bg-light);
+            padding: var(--spacing-3xl) 0;
+            margin: var(--spacing-3xl) 0;
+            border-radius: var(--radius-lg);
+        }
+
+        .calculator-card {
+            background: white;
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid var(--border-light);
+        }
+
+        .calculator-form {
+            display: grid;
+            gap: var(--spacing-lg);
+        }
+
+        .calc-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+        }
+
+        .calc-result {
+            background: var(--bg-light);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: 2px solid var(--primary-green);
+            margin-top: var(--spacing-lg);
+        }
+
+        .calc-result .result-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .order-form-section {
+            background: linear-gradient(135deg, var(--bg-light), white);
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-3xl);
+        }
+
+        .order-form {
+            background: white;
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-light);
+        }
+
+        .material-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-sm);
+            margin: var(--spacing-md) 0;
+        }
+
+        .material-option {
+            position: relative;
+        }
+
+        .material-option input[type="radio"] {
+            display: none;
+        }
+
+        .material-option label {
+            display: block;
+            padding: var(--spacing-md);
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all var(--transition-base);
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .material-option input[type="radio"]:checked + label {
+            border-color: var(--primary-green);
+            background: rgba(0, 100, 0, 0.05);
+            color: var(--primary-green);
+        }
+
+        .material-option label:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .quantity-input {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            gap: var(--spacing-sm);
+            align-items: end;
+        }
+
+        .quantity-controls {
+            display: flex;
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+
+        .quantity-btn {
+            background: var(--bg-light);
+            border: none;
+            padding: var(--spacing-sm) var(--spacing-md);
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary-green);
+            transition: background var(--transition-base);
+        }
+
+        .quantity-btn:hover {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .quantity-number {
+            background: white;
+            border: none;
+            padding: var(--spacing-sm) var(--spacing-md);
+            text-align: center;
+            font-weight: 600;
+            min-width: 60px;
+        }
+
+        .contact-summary {
+            background: white;
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-light);
+            height: fit-content;
+        }
+
+        .opening-hours {
+            margin-top: var(--spacing-lg);
+        }
+
+        .hours-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: var(--spacing-xs) 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        .day {
+            font-weight: 500;
+        }
+
+        .time {
+            color: var(--text-secondary-dark);
+        }
+
+        .time.current {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .calc-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+
+            .material-selector {
+                grid-template-columns: 1fr;
+            }
+
+            .quantity-input {
+                grid-template-columns: 1fr;
+            }
+
+            .price-table th,
+            .price-table td {
+                padding: var(--spacing-sm);
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Dark Mode */
+        body.dark-mode .material-category,
+        body.dark-mode .price-table-container,
+        body.dark-mode .service-info-card,
+        body.dark-mode .calculator-card,
+        body.dark-mode .order-form,
+        body.dark-mode .contact-summary {
+            background-color: var(--bg-dark);
+            border-color: var(--border-dark);
+        }
+
+        body.dark-mode .price-table th {
+            background-color: var(--bg-container-dark);
+        }
+
+        body.dark-mode .price-table tr:hover {
+            background-color: var(--bg-container-dark);
+        }
+
+        body.dark-mode .material-option label {
+            border-color: var(--border-dark);
+            background-color: var(--bg-dark);
+        }
+
+        body.dark-mode .material-option input[type="radio"]:checked + label {
+            background-color: rgba(0, 199, 0, 0.1);
+        }
+
+        body.dark-mode .calculator-section {
+            background-color: var(--bg-dark);
+        }
+
+        body.dark-mode .breadcrumb {
+            background-color: var(--bg-dark);
+            border-color: var(--border-dark);
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header class="header sticky-header">
+    <div class="nav-container">
+        <div class="logo">
+            <img id="logo" src="/assets/images/hero/FrankeBau_Logo.png" alt="Bau GmbH Franke Logo">
+        </div>
+
+        <nav class="nav-menu" id="nav-menu">
+            <a href="index.html" class="nav-link">Startseite</a>
+            <a href="ueber-uns.html" class="nav-link">Über uns</a>
+            <div class="dropdown">
+                <a href="leistungen.html" class="nav-link">Leistungen</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tiefbau.html">Tiefbau</a></li>
+                    <li><a href="hochbau.html">Hochbau</a></li>
+                    <li><a href="strassenbau.html">Straßenbau</a></li>
+                    <li><a href="bauvermessung.html">Bauvermessung</a></li>
+                    <li><a href="landwirtschaftsbau.html">Landwirtschaftsbau</a></li>
+                </ul>
+            </div>
+            <a href="materialverkauf.html" class="nav-link active">Materialverkauf</a>
+            <a href="referenzen.html" class="nav-link">Referenzen</a>
+            <a href="karriere.html" class="nav-link">Karriere</a>
+            <a href="kontakt.html" class="nav-link">Kontakt</a>
+            <a href="angebots-tool.html" class="nav-link nav-link-highlight">Kostenloses Angebot</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Dark Mode umschalten">
+                <img id="dark-mode-icon" src="/assets/images/icons/Icon_FrankeBau_DarkMode.png" alt="Dark Mode Icon" width="24" height="24">
+            </button>
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<button id="scrollToTop" class="scroll-top">
+    ↑
+</button>
+
+<!-- Breadcrumb -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+        <ol>
+            <li><a href="index.html">Startseite</a></li>
+            <li>Materialverkauf</li>
+        </ol>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="page-header">
+    <div class="container">
+        <h1>Materialverkauf & Sonderposten</h1>
+        <p class="page-subtitle">Hochwertige Baustoffe direkt vom Hersteller - Lieferung oder Abholung in der Oberlausitz</p>
+    </div>
+</section>
+
+<!-- Material Kategorien -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Unsere Materialien im Überblick</h2>
+            <p class="section-subtitle">Von Sand und Kies bis hin zu Pflastersteinen - alles für Ihr Bauvorhaben</p>
+        </div>
+
+        <div class="material-categories">
+            <div class="material-category">
+                <div class="category-image">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Sand und Kies" loading="lazy">
+                    <div class="category-badge">Ab Lager</div>
+                </div>
+                <div class="category-content">
+                    <h3>Sand & Kies</h3>
+                    <p>Hochwertiger Sand und Kies in verschiedenen Körnungen für alle Bauvorhaben.</p>
+                    <ul class="category-features">
+                        <li>Betonsand 0-2mm</li>
+                        <li>Estrichsand 0-4mm</li>
+                        <li>Kies 2-8mm, 8-16mm</li>
+                        <li>Drainagekies 16-32mm</li>
+                    </ul>
+                    <div class="price-preview">
+                        <span class="price">ab 18,50 €</span>
+                        <span class="unit">pro Tonne</span>
+                    </div>
+                    <a href="#sand-kies-preise" class="btn btn-outline">Preise ansehen</a>
+                </div>
+            </div>
+
+            <div class="material-category">
+                <div class="category-image">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Schotter und Splitt" loading="lazy">
+                    <div class="category-badge">Lagernd</div>
+                </div>
+                <div class="category-content">
+                    <h3>Schotter & Splitt</h3>
+                    <p>Frostbeständiger Schotter und hochwertiger Splitt für Fundamente und Straßenbau.</p>
+                    <ul class="category-features">
+                        <li>Basaltsplitt 2-5mm</li>
+                        <li>Frostschutzschotter 0-45mm</li>
+                        <li>Edelsplitt 8-16mm</li>
+                        <li>Gleisschotter 32-63mm</li>
+                    </ul>
+                    <div class="price-preview">
+                        <span class="price">ab 22,80 €</span>
+                        <span class="unit">pro Tonne</span>
+                    </div>
+                    <a href="#schotter-preise" class="btn btn-outline">Preise ansehen</a>
+                </div>
+            </div>
+
+            <div class="material-category">
+                <div class="category-image">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Transportbeton" loading="lazy">
+                    <div class="category-badge">Lieferung</div>
+                </div>
+                <div class="category-content">
+                    <h3>Transportbeton</h3>
+                    <p>Frischer Transportbeton in verschiedenen Festigkeitsklassen direkt zur Baustelle.</p>
+                    <ul class="category-features">
+                        <li>C16/20 bis C35/45</li>
+                        <li>Estrichbeton</li>
+                        <li>Waschbeton</li>
+                        <li>Pumpmischungen</li>
+                    </ul>
+                    <div class="price-preview">
+                        <span class="price">ab 98,00 €</span>
+                        <span class="unit">pro m³</span>
+                    </div>
+                    <a href="#beton-preise" class="btn btn-outline">Preise ansehen</a>
+                </div>
+            </div>
+
+            <div class="material-category">
+                <div class="category-image">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Pflastersteine" loading="lazy">
+                    <div class="category-badge">Sonderposten</div>
+                </div>
+                <div class="category-content">
+                    <h3>Pflastersteine</h3>
+                    <p>Hochwertige Pflastersteine und Platten für Einfahrten, Gehwege und Terrassen.</p>
+                    <ul class="category-features">
+                        <li>Betonsteine 6cm + 8cm</li>
+                        <li>Rasengittersteine</li>
+                        <li>Terrassenplatten</li>
+                        <li>Natursteinpflaster</li>
+                    </ul>
+                    <div class="price-preview">
+                        <span class="price">ab 12,90 €</span>
+                        <span class="unit">pro m²</span>
+                    </div>
+                    <a href="#pflaster-preise" class="btn btn-outline">Preise ansehen</a>
+                </div>
+            </div>
+
+            <div class="material-category">
+                <div class="category-image">
+                    <img src="/assets/images/hero/Placeholder.jpg" alt="Weitere Baustoffe" loading="lazy">
+                    <div class="category-badge">Auf Anfrage</div>
+                </div>
+                <div class="category-content">
+                    <h3>Weitere Baustoffe</h3>
+                    <p>Umfangreiches Sortiment weiterer Baumaterialien für spezielle Anwendungen.</p>
+                    <ul class="category-features">
+                        <li>Mutterboden & Humus</li>
+                        <li>Recycling-Materialien</li>
+                        <li>Gabionensteine</li>
+                        <li>Zierkies & Dekorsplitt</li>
+                    </ul>
+                    <div class="price-preview">
+                        <span class="price">Preis</span>
+                        <span class="unit">auf Anfrage</span>
+                    </div>
+                    <a href="#weitere-materialien" class="btn btn-outline">Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Preislisten -->
+<section class="section-padding bg-light" id="preislisten">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Aktuelle Preislisten</h2>
+            <p class="section-subtitle">Alle Preise verstehen sich zzgl. MwSt. und gelten ab Werk Hainewalde</p>
+        </div>
+
+        <div class="price-tables">
+            <!-- Sand & Kies Preisliste -->
+            <div class="price-table-container" id="sand-kies-preise">
+                <div class="price-table-header">
+                    <h3>Sand & Kies</h3>
+                </div>
+                <table class="price-table">
+                    <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Körnung</th>
+                        <th>Preis/Tonne</th>
+                        <th>Mindestmenge</th>
+                        <th>Verfügbarkeit</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Betonsand</td>
+                        <td>0-2mm</td>
+                        <td class="price-cell">18,50 €</td>
+                        <td>5 Tonnen</td>
+                        <td><span class="availability-badge available">Lagernd</span></td>
+                    </tr>
+                    <tr>
+                        <td>Estrichsand</td>
+                        <td>0-4mm</td>
+                        <td class="price-cell">19,80 €</td>
+                        <td>5 Tonnen</td>
+                        <td><span class="availability-badge available">Lagernd</span></td>
+                    </tr>
+                    <tr>
+                        <td>Kies gewaschen</td>
+                        <td>2-8mm</td>
+                        <td class="price-cell">21,50 €</td>
+                        <td>3 Tonnen</td>
+                        <td><span class="availability-badge available">Lagernd</span></td>
+                    </tr>
+                    <tr>
+                        <td>Kies gewaschen</td>
+                        <td>8-16mm</td>
+                        <td class="price-cell">22,80 €</td>
+                        <td>3 Tonnen</td>
+                        <td><span class="availability-badge available">Lagernd</span></td>
+                    </tr>
+                    <tr>
+                        <td>Drainagekies</td>
+                        <td>16-32mm</td>
+                        <td class="price-cell">24,90 €</td>
+                        <td>5 Tonnen</td>
+                        <td><span class="availability-badge limited">Begrenzt</span></td>
+                    </tr>
+                    <tr>
+                        <td>Rheinkies natur</td>
+                        <td>8-16mm</td>
+                        <td class="price-cell">28,50 €</td>
+                        <td>2 Tonnen</td>
+                        <td><span class="availability-badge available">Lagernd</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Schotter & Splitt Preisliste -->
+            <div class="price-table-container" id="schotter-preise">
+                <div class="price-table-header">
+                    <h3>Schotter & Splitt</h3>
+                </div>
+                <table class="price-table">
+                    <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Körnung</th>
+                        <th>Preis/Tonne</th>
+                        <th>Mindestmenge</th>
+                        <th>Verfügbarkeit</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Basaltsplitt</td>
+                        <td>2-5mm</td>
+                        <td class="price-cell">22,80 €</td>
+                        <td>3 Tonnen</td>
+                        <td><span class="availability-badge available">Lagernd</span></td>
+                    </tr>
+                    <tr>
+                        <td>Frostschutzschotter</td>
+                        <td>0-45mm</td>
+                        <td class="price-cell">19,90 €</td>
+                        <td>10 Tonnen</td>
+                        <td><span class="availability-badge available">Lagernd</span></td>
+                    </tr>
+                    <tr>
+                        <td>Edelsplitt Granit</td>
+                        <td>8-16mm</td>
+                        <td class="price-cell">32,50 €</td>
+                        <td>2 Tonnen</td>
+                        <td><span class="availability-badge limited">Begrenzt</span></td>
+                    </tr>
+                    <tr>
+                        <td>Gleisschotter</td>
+                        <td>32-63mm</td>
+                        <td class="price-cell">26,80 €</td>
+                        <td>5 Tonnen</td>
+                        <td><span class="availability-badge available">Lagernd</span></td>
+                    </tr>
+                    <tr>
+                        <td>Mineralgemisch</td>
+                        <td>0-32mm</td>
+                        <td class="price-cell">16,50 €</td>
+                        <td>10 Tonnen</td>
+                        <td><span class="availability-badge available">Lagernd</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Beton Preisliste -->
+            <div class="price-table-container" id="beton-preise">
+                <div class="price-table-header">
+                    <h3>Transportbeton</h3>
+                </div>
+                <table class="price-table">
+                    <thead>
+                    <tr>
+                        <th>Betonsorte</th>
+                        <th>Festigkeitsklasse</th>
+                        <th>Preis/m³</th>
+                        <th>Mindestmenge</th>
+                        <th>Verfügbarkeit</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Normalbeton</td>
+                        <td>C16/20</td>
+                        <td class="price-cell">98,00 €</td>
+                        <td>3 m³</td>
+                        <td><span class="availability-badge available">Verfügbar</span></td>
+                    </tr>
+                    <tr>
+                        <td>Normalbeton</td>
+                        <td>C20/25</td>
+                        <td class="price-cell">102,50 €</td>
+                        <td>3 m³</td>
+                        <td><span class="availability-badge available">Verfügbar</span></td>
+                    </tr>
+                    <tr>
+                        <td>Hochfester Beton</td>
+                        <td>C25/30</td>
+                        <td class="price-cell">108,90 €</td>
+                        <td>3 m³</td>
+                        <td><span class="availability-badge available">Verfügbar</span></td>
+                    </tr>
+                    <tr>
+                        <td>Estrichbeton</td>
+                        <td>C25/30</td>
+                        <td class="price-cell">115,80 €</td>
+                        <td>2 m³</td>
+                        <td><span class="availability-badge available">Verfügbar</span></td>
+                    </tr>
+                    <tr>
+                        <td>Pumpmischung</td>
+                        <td>C20/25</td>
+                        <td class="price-cell">118,50 €</td>
+                        <td>5 m³</td>
+                        <td><span class="availability-badge available">Verfügbar</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Kostenrechner -->
+<section class="calculator-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Kostenrechner</h2>
+            <p class="section-subtitle">Berechnen Sie schnell und einfach die Kosten für Ihr Material</p>
+        </div>
+
+        <div class="calculator-card">
+            <form class="calculator-form" id="cost-calculator">
+                <div class="calc-row">
+                    <div class="form-group">
+                        <label for="calc-material">Material auswählen</label>
+                        <select id="calc-material" name="material" required>
+                            <option value="">Bitte wählen</option>
+                            <option value="18.50">Betonsand 0-2mm (18,50 €/t)</option>
+                            <option value="19.80">Estrichsand 0-4mm (19,80 €/t)</option>
+                            <option value="21.50">Kies 2-8mm (21,50 €/t)</option>
+                            <option value="22.80">Kies 8-16mm (22,80 €/t)</option>
+                            <option value="24.90">Drainagekies 16-32mm (24,90 €/t)</option>
+                            <option value="98.00">Beton C16/20 (98,00 €/m³)</option>
+                            <option value="102.50">Beton C20/25 (102,50 €/m³)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="calc-quantity">Menge</label>
+                        <input type="number" id="calc-quantity" name="quantity" min="1" step="0.5" placeholder="0" required>
+                    </div>
+                </div>
+
+                <div class="calc-row">
+                    <div class="form-group">
+                        <label for="calc-delivery">Lieferung gewünscht?</label>
+                        <select id="calc-delivery" name="delivery">
+                            <option value="0">Nein, Abholung</option>
+                            <option value="45">Ja, Lieferung (+45 €)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="calc-distance">Entfernung (km)</label>
+                        <input type="number" id="calc-distance" name="distance" min="0" max="50" step="1" placeholder="0">
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="calculateCost()">Kosten berechnen</button>
+
+                <div class="calc-result" id="calc-result" style="display: none;">
+                    <div class="result-price" id="result-price">0,00 €</div>
+                    <p>Geschätzte Gesamtkosten (netto)</p>
+                    <small>Alle Preise zzgl. 19% MwSt. • Unverbindliche Preisauskunft</small>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Service-Informationen -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Lieferung & Abholung</h2>
+            <p class="section-subtitle">Flexible Lieferoptionen für Ihren Bedarf</p>
+        </div>
+
+        <div class="service-info-grid">
+            <div class="service-info-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                    </svg>
+                </div>
+                <h3>Lieferservice</h3>
+                <p>Zuverlässige Lieferung in die gesamte Oberlausitz und angrenzende Gebiete.</p>
+                <ul class="info-list">
+                    <li>
+                        <span class="info-label">Lieferradius</span>
+                        <span class="info-value">bis 50 km</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Grundpreis</span>
+                        <span class="info-value">45,00 € netto</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Zusatz ab 20km</span>
+                        <span class="info-value">1,80 €/km</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Mindestbestellung</span>
+                        <span class="info-value">3 Tonnen</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Lieferzeit</span>
+                        <span class="info-value">2-3 Werktage</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="service-info-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                </div>
+                <h3>Abholung am Werk</h3>
+                <p>Materialabholung direkt bei uns in Hainewalde - oft günstiger und sofort verfügbar.</p>
+                <ul class="info-list">
+                    <li>
+                        <span class="info-label">Standort</span>
+                        <span class="info-value">Hainewalde</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Preisersparnis</span>
+                        <span class="info-value">Keine Lieferkosten</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Mindestmenge</span>
+                        <span class="info-value">ab 1 Tonne</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Verfügbarkeit</span>
+                        <span class="info-value">Sofort</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Beladung</span>
+                        <span class="info-value">Mit Radlader</span>
+                    </li>
+                </ul>
+                <div class="opening-hours">
+                    <h4>Abholzeiten:</h4>
+                    <ul class="hours-list">
+                        <li>
+                            <span class="day">Montag - Freitag</span>
+                            <span class="time current">07:00 - 17:00</span>
+                        </li>
+                        <li>
+                            <span class="day">Samstag</span>
+                            <span class="time">08:00 - 12:00</span>
+                        </li>
+                        <li>
+                            <span class="day">Sonntag</span>
+                            <span class="time">Geschlossen</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-info-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                    </svg>
+                </div>
+                <h3>Terminservice</h3>
+                <p>Planen Sie Ihre Lieferung oder Abholung ganz nach Ihren Bedürfnissen.</p>
+                <ul class="info-list">
+                    <li>
+                        <span class="info-label">Vorlaufzeit</span>
+                        <span class="info-value">24h Bestellung</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Terminauswahl</span>
+                        <span class="info-value">Flexibel</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Eillieferung</span>
+                        <span class="info-value">Nach Absprache</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Großmengen</span>
+                        <span class="info-value">Sonderkonditionen</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Beratung</span>
+                        <span class="info-value">Kostenlos</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bestellformular -->
+<section class="order-form-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Material bestellen</h2>
+            <p class="section-subtitle">Einfach, schnell und unverbindlich anfragen</p>
+        </div>
+
+        <div class="form-grid">
+            <div class="order-form">
+                <form id="material-order-form" action="/assets/php/contact-handler.php" method="POST">
+                    <input type="hidden" name="page_type" value="materialverkauf">
+                    <input type="text" name="website" style="display: none;">
+
+                    <div class="form-section">
+                        <h3 class="form-section-title">Material auswählen</h3>
+                        <div class="material-selector">
+                            <div class="material-option">
+                                <input type="radio" id="sand-beton" name="material" value="Betonsand 0-2mm">
+                                <label for="sand-beton">Betonsand<br><small>0-2mm</small></label>
+                            </div>
+                            <div class="material-option">
+                                <input type="radio" id="sand-estrich" name="material" value="Estrichsand 0-4mm">
+                                <label for="sand-estrich">Estrichsand<br><small>0-4mm</small></label>
+                            </div>
+                            <div class="material-option">
+                                <input type="radio" id="kies-klein" name="material" value="Kies 2-8mm">
+                                <label for="kies-klein">Kies<br><small>2-8mm</small></label>
+                            </div>
+                            <div class="material-option">
+                                <input type="radio" id="kies-gross" name="material" value="Kies 8-16mm">
+                                <label for="kies-gross">Kies<br><small>8-16mm</small></label>
+                            </div>
+                            <div class="material-option">
+                                <input type="radio" id="schotter" name="material" value="Frostschutzschotter 0-45mm">
+                                <label for="schotter">Schotter<br><small>0-45mm</small></label>
+                            </div>
+                            <div class="material-option">
+                                <input type="radio" id="material-andere" name="material" value="Andere">
+                                <label for="material-andere">Andere<br><small>In Nachricht angeben</small></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="form-section-title">Menge und Lieferung</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quantity">Menge (Tonnen)</label>
+                                <div class="quantity-input">
+                                    <input type="number" id="quantity" name="quantity" min="1" step="0.5" value="5" required>
+                                    <div class="quantity-controls">
+                                        <button type="button" class="quantity-btn" onclick="adjustQuantity(-1)">-</button>
+                                        <button type="button" class="quantity-btn" onclick="adjustQuantity(1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="delivery-type">Lieferung</label>
+                                <select id="delivery-type" name="delivery_type" required>
+                                    <option value="abholung">Abholung</option>
+                                    <option value="lieferung">Lieferung</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="form-section-title">Ihre Kontaktdaten</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="order-vorname">Vorname *</label>
+                                <input type="text" id="order-vorname" name="vorname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="order-nachname">Nachname *</label>
+                                <input type="text" id="order-nachname" name="nachname" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="order-email">E-Mail *</label>
+                                <input type="email" id="order-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="order-telefon">Telefon *</label>
+                                <input type="tel" id="order-telefon" name="telefon" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="order-adresse">Lieferadresse / Firma</label>
+                            <textarea id="order-adresse" name="adresse" rows="3" placeholder="Straße, Hausnummer, PLZ, Ort"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="form-section-title">Zusätzliche Informationen</h3>
+                        <div class="form-group">
+                            <label for="order-nachricht">Nachricht / Sonderwünsche</label>
+                            <textarea id="order-nachricht" name="nachricht" rows="4" placeholder="Gewünschter Liefertermin, besondere Anforderungen, etc."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="datenschutz" required>
+                            <span class="checkmark"></span>
+                            Ich stimme der <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> zu. *
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large">Unverbindlich anfragen</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="contact-summary">
+                <h3>Direkter Kontakt</h3>
+                <p>Haben Sie Fragen oder benötigen eine persönliche Beratung? Rufen Sie uns einfach an!</p>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Telefon</h4>
+                        <a href="tel:+4935841-3190">035841-3190</a>
+                        <p>Mo-Fr: 7:00-17:00 Uhr</p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>E-Mail</h4>
+                        <a href="mailto:material@baufranke.de">material@baufranke.de</a>
+                        <p>Antwort innerhalb 24h</p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Standort</h4>
+                        <p>Hauptstraße 123<br>02779 Hainewalde</p>
+                        <a href="kontakt.html">Anfahrt</a>
+                    </div>
+                </div>
+
+                <div class="service-highlights">
+                    <h4>Unsere Vorteile:</h4>
+                    <ul class="category-features">
+                        <li>Faire Preise ab Werk</li>
+                        <li>Hohe Materialqualität</li>
+                        <li>Schnelle Lieferung</li>
+                        <li>Flexible Abholung</li>
+                        <li>Persönliche Beratung</li>
+                        <li>Große Auswahl lagernd</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Bau GmbH Franke</h4>
+                <p>Ihr regionaler Baupartner seit 1991. Moderne Technik trifft Familientradition - für Bauvorhaben in Sachsen und der Oberlausitz.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Leistungen</h4>
+                <ul>
+                    <li><a href="tiefbau.html">Tiefbau</a></li>
+                    <li><a href="hochbau.html">Hochbau</a></li>
+                    <li><a href="strassenbau.html">Straßenbau</a></li>
+                    <li><a href="bauvermessung.html">Bauvermessung</a></li>
+                    <li><a href="landwirtschaftsbau.html">Landwirtschaftsbau</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Unternehmen</h4>
+                <ul>
+                    <li><a href="ueber-uns.html">Über uns</a></li>
+                    <li><a href="referenzen.html">Referenzen</a></li>
+                    <li><a href="karriere.html">Karriere</a></li>
+                    <li><a href="materialverkauf.html">Materialverkauf</a></li>
+                    <li><a href="bescheinigungen.html">Bescheinigungen</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-contact">
+                <h4>Kontakt</h4>
+                <p>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    035841-3190
+                </p>
+                <p>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    info@baufranke.de
+                </p>
+                <p>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    Scheibe 17<br>02779 Hainewalde
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bau GmbH Franke. Alle Rechte vorbehalten.</p>
+            <div class="footer-legal">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/popup-modal.js"></script>
+<script src="/assets/js/universal-toast.js"></script>
+<script src="/assets/js/lazy-loading.js"></script>
+
+<script>
+    // Kostenrechner Funktionalität
+    function calculateCost() {
+        const material = document.getElementById('calc-material').value;
+        const quantity = parseFloat(document.getElementById('calc-quantity').value);
+        const delivery = parseFloat(document.getElementById('calc-delivery').value);
+        const distance = parseFloat(document.getElementById('calc-distance').value) || 0;
+
+        if (!material || !quantity) {
+            alert('Bitte wählen Sie ein Material und geben Sie eine Menge ein.');
+            return;
+        }
+
+        let materialCost = parseFloat(material) * quantity;
+        let deliveryCost = delivery;
+
+        // Zusätzliche Entfernungskosten ab 20km
+        if (delivery > 0 && distance > 20) {
+            deliveryCost += (distance - 20) * 1.80;
+        }
+
+        const totalCost = materialCost + deliveryCost;
+
+        document.getElementById('result-price').textContent = totalCost.toFixed(2).replace('.', ',') + ' €';
+        document.getElementById('calc-result').style.display = 'block';
+    }
+
+    // Mengen-Steuerung
+    function adjustQuantity(change) {
+        const quantityInput = document.getElementById('quantity');
+        let currentValue = parseFloat(quantityInput.value) || 0;
+        currentValue += change;
+        if (currentValue < 1) currentValue = 1;
+        quantityInput.value = currentValue;
+    }
+
+    // Smooth Scrolling zu Preislisten
+    document.addEventListener('DOMContentLoaded', function() {
+        // Smooth scrolling für Anker-Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Aktualisiere Öffnungszeiten-Status
+        updateOpeningHours();
+    });
+
+    function updateOpeningHours() {
+        const now = new Date();
+        const currentDay = now.getDay(); // 0 = Sonntag, 1 = Montag, etc.
+        const currentHour = now.getHours();
+
+        // Entferne alte Current-Klassen
+        document.querySelectorAll('.time.current').forEach(el => {
+            el.classList.remove('current');
+        });
+
+        // Füge Current-Klasse für aktuellen Tag hinzu
+        const timeElements = document.querySelectorAll('.hours-list .time');
+
+        if (currentDay >= 1 && currentDay <= 5 && currentHour >= 7 && currentHour < 17) {
+            // Montag-Freitag 7-17 Uhr
+            timeElements[0]?.classList.add('current');
+        } else if (currentDay === 6 && currentHour >= 8 && currentHour < 12) {
+            // Samstag 8-12 Uhr
+            timeElements[1]?.classList.add('current');
+        }
+    }
+
+    // Form-Handler für Materialbestellung
+    document.getElementById('material-order-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Sammle alle Formulardaten
+        const formData = new FormData(this);
+
+        // Validierung
+        const requiredFields = ['material', 'quantity', 'delivery_type', 'vorname', 'nachname', 'email', 'telefon'];
+        let isValid = true;
+
+        requiredFields.forEach(field => {
+            const element = this.querySelector(`[name="${field}"]`);
+            if (!element.value.trim()) {
+                isValid = false;
+                element.style.borderColor = '#ef4444';
+            } else {
+                element.style.borderColor = '';
+            }
+        });
+
+        if (!isValid) {
+            alert('Bitte füllen Sie alle Pflichtfelder aus.');
+            return;
+        }
+
+        // Simuliere Formular-Absendung
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Wird gesendet...';
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+            alert('Ihre Anfrage wurde erfolgreich gesendet! Wir melden uns innerhalb von 24 Stunden bei Ihnen.');
+            this.reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 2000);
+    });
+
+    // Material-Auswahl Handler
+    document.querySelectorAll('input[name="material"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            // Optional: Automatische Preisberechnung basierend auf Material
+            updateEstimatedPrice();
+        });
+    });
+
+    function updateEstimatedPrice() {
+        // Optional: Zeige geschätzte Kosten basierend auf Materialauswahl
+        const selectedMaterial = document.querySelector('input[name="material"]:checked');
+        const quantity = document.getElementById('quantity').value;
+
+        if (selectedMaterial && quantity) {
+            // Implementiere Preisschätzung
+            console.log('Material:', selectedMaterial.value, 'Menge:', quantity);
+        }
+    }
+</script>
+
+</body>
+</html>

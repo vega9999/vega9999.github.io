@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kostenloses Angebot - Bau GmbH Franke | Pflasterarbeiten & Landschaftsbau</title>
+    <meta name="description" content="Erhalten Sie in wenigen Minuten ein unverbindliches Angebot für Ihre Bauarbeiten. Einfach, schnell und transparent von der Bau GmbH Franke.">
+    <meta name="keywords" content="Angebot Bauarbeiten, Kostenvoranschlag, Bau GmbH Franke, Pflaster Preis, Terrasse, Einfahrt">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/dark-mode.css">
+    <link rel="stylesheet" href="/assets/css/popup-modal.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/angebots-tool.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://liracore.onrender.com/js/cookie-banner.js"></script>
+    <script src="https://liracore.onrender.com/static/js/accessibility-widget.js"></script>
+</head>
+<body>
+<!-- Header -->
+<header class="header sticky-header">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="index.html">
+                <img id="logo" src="/assets/images/hero/FrankeBau_Logo.png" alt="Bau GmbH Franke Logo">
+            </a>
+        </div>
+
+        <nav class="nav-menu" id="nav-menu">
+            <a href="index.html" class="nav-link">Startseite</a>
+            <a href="ueber-uns.html" class="nav-link">Über uns</a>
+            <div class="dropdown">
+                <a href="leistungen.html" class="nav-link">Leistungen</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tiefbau.html">Tiefbau</a></li>
+                    <li><a href="hochbau.html">Hochbau</a></li>
+                    <li><a href="strassenbau.html">Straßenbau</a></li>
+                    <li><a href="bauvermessung.html">Bauvermessung</a></li>
+                    <li><a href="landwirtschaftsbau.html">Landwirtschaftsbau</a></li>
+                </ul>
+            </div>
+            <a href="materialverkauf.html" class="nav-link">Materialverkauf</a>
+            <a href="referenzen.html" class="nav-link">Referenzen</a>
+            <a href="karriere.html" class="nav-link">Karriere</a>
+            <a href="kontakt.html" class="nav-link">Kontakt</a>
+            <a href="angebots-tool.html" class="nav-link nav-link-highlight">Kostenloses Angebot</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Dark Mode umschalten">
+                <img id="dark-mode-icon" src="/assets/images/icons/Icon_FrankeBau_DarkMode.png" alt="Dark Mode Icon" width="24" height="24">
+            </button>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<button id="scrollToTop" class="scroll-top">↑</button>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Kostenloses Angebot erhalten</h1>
+        <p class="page-subtitle">Einfach, schnell und unverbindlich - Ihr persönliches Angebot in wenigen Minuten</p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<main class="angebots-tool-main">
+    <div class="container">
+
+        <!-- Progress Steps -->
+        <div class="progress-container scroll-animate">
+            <div class="progress-steps">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <span class="step-label">Kategorie</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-circle">2</div>
+                    <span class="step-label">Details</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-circle">3</div>
+                    <span class="step-label">Zusatz</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-circle">4</div>
+                    <span class="step-label">Kontakt</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tool-layout">
+
+            <!-- Form Section -->
+            <div class="form-section scroll-animate">
+                <div class="form-container">
+                    <form id="angebots-form" action="/assets/php/angebots-handler.php" method="POST" enctype="multipart/form-data">
+
+                        <!-- Step 1: Projektkategorie -->
+                        <div class="form-step active" data-step="1">
+                            <div class="step-header">
+                                <h2>Welche Art von Projekt planen Sie?</h2>
+                                <p>Wählen Sie zunächst die passende Kategorie für Ihr Vorhaben</p>
+                            </div>
+
+                            <div class="category-selection">
+                                <div class="category-cards">
+                                    <div class="category-card" data-category="pflaster" style="background-image: url('/assets/images/hero/Pflasterarbeiten.png')">
+                                        <div class="category-overlay">
+                                            <h3>Pflasterarbeiten</h3>
+                                            <p>Einfahrten, Terrassen, Gehwege und Höfe pflastern</p>
+                                        </div>
+                                        <input type="radio" name="category" value="pflaster" id="cat-pflaster">
+                                    </div>
+
+                                    <div class="category-card" data-category="asphalt" style="background-image: url('/assets/images/hero/Asphaltarbeiten.png')">
+                                        <div class="category-overlay">
+                                            <h3>Asphaltarbeiten</h3>
+                                            <p>Einfahrten und Wege asphaltieren</p>
+                                        </div>
+                                        <input type="radio" name="category" value="asphalt" id="cat-asphalt">
+                                    </div>
+
+                                    <div class="category-card" data-category="beton" style="background-image: url('/assets/images/hero/Betonarbeiten.png')">
+                                        <div class="category-overlay">
+                                            <h3>Betonarbeiten</h3>
+                                            <p>Bodenplatten, Fundamente und Betonflächen</p>
+                                        </div>
+                                        <input type="radio" name="category" value="beton" id="cat-beton">
+                                    </div>
+
+                                    <div class="category-card" data-category="garten" style="background-image: url('/assets/images/hero/Garten_Landschaft.png')">
+                                        <div class="category-overlay">
+                                            <h3>Garten & Landschaft</h3>
+                                            <p>Gartengestaltung, Drainage und Erdarbeiten</p>
+                                        </div>
+                                        <input type="radio" name="category" value="garten" id="cat-garten">
+                                    </div>
+
+                                    <div class="category-card" data-category="sonstiges" style="background-image: url('/assets/images/hero/Sonstige_Arbeiten.png')">
+                                        <div class="category-overlay">
+                                            <h3>Sonstige Arbeiten</h3>
+                                            <p>Weitere Bauleistungen und individuelle Projekte</p>
+                                        </div>
+                                        <input type="radio" name="category" value="sonstiges" id="cat-sonstiges">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-navigation">
+                                <button type="button" class="btn btn-primary next-step">Weiter zu den Details</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Projektdetails -->
+                        <div class="form-step" data-step="2">
+                            <div class="step-header">
+                                <h2>Details zu Ihrem Projekt</h2>
+                                <p>Spezifische Angaben für eine präzise Kostenschätzung</p>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="objektart">Spezifische Art *</label>
+                                    <select id="objektart" name="objektart" required>
+                                        <option value="">Bitte wählen</option>
+                                        <!-- Wird dynamisch gefüllt basierend auf Kategorie -->
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="flaeche">Fläche in m² *</label>
+                                    <input type="number" id="flaeche" name="flaeche" min="1" max="10000" step="0.1" placeholder="z.B. 50" required>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="projektadresse">Projektadresse</label>
+                                    <input type="text" id="projektadresse" name="projektadresse" placeholder="Straße, PLZ Ort (falls abweichend von Ihrer Adresse)">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="beanspruchung">Beanspruchung/Belastung *</label>
+                                    <select id="beanspruchung" name="beanspruchung" required>
+                                        <option value="">Bitte wählen</option>
+                                        <option value="fussgaenger">Nur Fußgänger</option>
+                                        <option value="pkw">PKW-befahrbar</option>
+                                        <option value="lkw">LKW-befahrbar</option>
+                                        <option value="schwerlast">Schwerlast</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ausfuehrungszeitraum">Gewünschter Ausführungszeitraum</label>
+                                    <select id="ausfuehrungszeitraum" name="ausfuehrungszeitraum">
+                                        <option value="">Flexibel</option>
+                                        <option value="asap">So schnell wie möglich</option>
+                                        <option value="1-2-monate">1-2 Monate</option>
+                                        <option value="3-6-monate">3-6 Monate</option>
+                                        <option value="naechstes-jahr">Nächstes Jahr</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Material Selection -->
+                            <div class="material-section" id="material-section">
+                                <h3>Material wählen</h3>
+                                <div class="material-selection">
+                                    <div class="material-cards" id="material-cards">
+                                        <!-- Wird dynamisch gefüllt -->
+                                    </div>
+                                </div>
+
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="qualitaet">Materialqualität</label>
+                                        <select id="qualitaet" name="qualitaet">
+                                            <option value="standard">Standard</option>
+                                            <option value="premium">Premium (+20%)</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="verlegemuster">Verlegemuster</label>
+                                        <select id="verlegemuster" name="verlegemuster">
+                                            <option value="reihenverband">Reihenverband</option>
+                                            <option value="fischgraet">Fischgrät</option>
+                                            <option value="wildverband">Wildverband</option>
+                                            <option value="diagonal">Diagonal</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-navigation">
+                                <button type="button" class="btn btn-outline prev-step">Zurück</button>
+                                <button type="button" class="btn btn-primary next-step">Weiter</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Zusätzliche Leistungen -->
+                        <div class="form-step" data-step="3">
+                            <div class="step-header">
+                                <h2>Zusätzliche Leistungen</h2>
+                                <p>Optionale Arbeiten für Ihr Projekt</p>
+                            </div>
+
+                            <div class="zusatz-leistungen">
+                                <div class="zusatz-grid" id="zusatz-grid">
+                                    <!-- Wird dynamisch gefüllt basierend auf Kategorie -->
+                                </div>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="abgrabungstiefe">Abgrabungstiefe (cm)</label>
+                                    <select id="abgrabungstiefe" name="abgrabungstiefe">
+                                        <option value="30">30 cm (Standard)</option>
+                                        <option value="40">40 cm (+3€/m²)</option>
+                                        <option value="50">50 cm (+6€/m²)</option>
+                                        <option value="60">60 cm (+9€/m²)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="bodenbeschaffenheit">Bodenverhältnisse</label>
+                                    <select id="bodenbeschaffenheit" name="bodenbeschaffenheit">
+                                        <option value="normal">Normal/Lehm</option>
+                                        <option value="schwierig">Schwieriger Boden (+15%)</option>
+                                        <option value="fels">Fels/sehr hart (+30%)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="hangneigung">Hangneigung</label>
+                                    <select id="hangneigung" name="hangneigung">
+                                        <option value="eben">Eben</option>
+                                        <option value="leicht">Leichte Neigung (+5%)</option>
+                                        <option value="stark">Starke Neigung (+15%)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="erreichbarkeit">LKW-Erreichbarkeit</label>
+                                    <select id="erreichbarkeit" name="erreichbarkeit">
+                                        <option value="gut">Gut erreichbar</option>
+                                        <option value="eingeschraenkt">Eingeschränkt (+10%)</option>
+                                        <option value="schwierig">Schwierig (+25%)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- File Upload Section -->
+                            <div class="upload-section">
+                                <h3>Uploads (optional)</h3>
+                                <p>Helfen Sie uns mit Fotos oder Plänen bei der präziseren Kalkulation</p>
+
+                                <div class="upload-grid">
+                                    <div class="upload-item">
+                                        <label for="fotos" class="upload-label">
+                                            <div class="upload-icon">
+                                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                                                </svg>
+                                            </div>
+                                            <span>Fotos der Fläche</span>
+                                            <small>Max. 3 Dateien, je 5MB</small>
+                                        </label>
+                                        <input type="file" id="fotos" name="fotos[]" accept="image/jpeg,image/jpg,image/png" multiple>
+                                    </div>
+
+                                    <div class="upload-item">
+                                        <label for="plaene" class="upload-label">
+                                            <div class="upload-icon">
+                                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                                                </svg>
+                                            </div>
+                                            <span>Pläne/Skizzen</span>
+                                            <small>PDF, max. 5MB</small>
+                                        </label>
+                                        <input type="file" id="plaene" name="plaene" accept=".pdf">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-navigation">
+                                <button type="button" class="btn btn-outline prev-step">Zurück</button>
+                                <button type="button" class="btn btn-primary next-step">Weiter</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Kontakt -->
+                        <div class="form-step" data-step="4">
+                            <div class="step-header">
+                                <h2>Ihre Kontaktdaten</h2>
+                                <p>Damit wir Ihnen Ihr persönliches Angebot zusenden können</p>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="vorname">Vorname *</label>
+                                    <input type="text" id="vorname" name="vorname" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="nachname">Nachname *</label>
+                                    <input type="text" id="nachname" name="nachname" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="firma">Firma (optional)</label>
+                                    <input type="text" id="firma" name="firma">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">E-Mail-Adresse *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="telefon">Telefon *</label>
+                                    <input type="tel" id="telefon" name="telefon" required>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="strasse">Straße & Hausnummer *</label>
+                                    <input type="text" id="strasse" name="strasse" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="plz">PLZ *</label>
+                                    <input type="text" id="plz" name="plz" pattern="[0-9]{5}" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ort">Ort *</label>
+                                    <input type="text" id="ort" name="ort" required>
+                                </div>
+                            </div>
+
+                            <div class="consent-section">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="datenschutz" required>
+                                    <span class="checkmark"></span>
+                                    Ich stimme der <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> zu und erteile meine Einwilligung zur Verarbeitung meiner Daten für die Angebotserstellung. *
+                                </label>
+
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="agb" required>
+                                    <span class="checkmark"></span>
+                                    Ich habe die <a href="impressum.html#agb" target="_blank">Allgemeinen Geschäftsbedingungen</a> gelesen und stimme zu. *
+                                </label>
+
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="rueckruf">
+                                    <span class="checkmark"></span>
+                                    Ja, ich möchte einen persönlichen Rückruf für eine detaillierte Projektberatung.
+                                </label>
+                            </div>
+
+                            <div class="step-navigation">
+                                <button type="button" class="btn btn-outline prev-step">Zurück</button>
+                                <button type="submit" class="btn btn-primary" id="submit-btn">Angebot erstellen</button>
+                            </div>
+                        </div>
+
+                        <!-- Honeypot -->
+                        <input type="text" name="website" style="display: none;">
+                    </form>
+                </div>
+            </div>
+
+            <!-- Live Preview Section -->
+            <div class="preview-section scroll-animate">
+                <div class="preview-container sticky-preview">
+                    <div class="preview-header">
+                        <h3>Ihr Angebot</h3>
+                        <div class="confidence-badge">
+                            <span class="confidence-text">Geschätzt ±</span>
+                            <span class="confidence-value">15%</span>
+                        </div>
+                    </div>
+
+                    <div class="preview-content">
+                        <div class="project-summary" id="project-summary">
+                            <div class="summary-item">
+                                <span class="label">Kategorie:</span>
+                                <span class="value" id="preview-kategorie">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Projekt:</span>
+                                <span class="value" id="preview-projekt">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Fläche:</span>
+                                <span class="value" id="preview-flaeche">- m²</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Material:</span>
+                                <span class="value" id="preview-material">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Belastung:</span>
+                                <span class="value" id="preview-belastung">-</span>
+                            </div>
+                        </div>
+
+                        <div class="cost-breakdown" id="cost-breakdown">
+                            <div class="cost-item">
+                                <span class="cost-label">Material</span>
+                                <span class="cost-value" id="cost-material">0,00 €</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">Arbeitskosten</span>
+                                <span class="cost-value" id="cost-arbeit">0,00 €</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">Unterbau</span>
+                                <span class="cost-value" id="cost-unterbau">0,00 €</span>
+                            </div>
+                            <div class="cost-item additional-services" id="additional-services" style="display: none;">
+                                <span class="cost-label">Zusatzleistungen</span>
+                                <span class="cost-value" id="cost-zusatz">0,00 €</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">Anfahrt & Einrichtung</span>
+                                <span class="cost-value" id="cost-anfahrt">0,00 €</span>
+                            </div>
+
+                            <div class="cost-subtotal">
+                                <span class="cost-label">Zwischensumme</span>
+                                <span class="cost-value" id="cost-subtotal">0,00 €</span>
+                            </div>
+
+                            <div class="cost-tax">
+                                <span class="cost-label">MwSt. (19%)</span>
+                                <span class="cost-value" id="cost-tax">0,00 €</span>
+                            </div>
+
+                            <div class="cost-total">
+                                <span class="cost-label">Gesamt (brutto)</span>
+                                <span class="cost-value" id="cost-total">0,00 €</span>
+                            </div>
+                        </div>
+
+                        <div class="preview-actions">
+                            <button type="button" class="btn btn-outline" id="preview-pdf" style="display: none;">
+                                PDF anzeigen
+                            </button>
+                            <button type="button" class="btn btn-primary" id="preview-download" style="display: none;">
+                                PDF herunterladen
+                            </button>
+                        </div>
+
+                        <div class="pdf-viewer" id="pdf-viewer" style="display: none;">
+                            <iframe id="pdf-iframe" width="100%" height="600" frameborder="0"></iframe>
+                        </div>
+
+                        <div class="preview-disclaimer">
+                            <p><strong>Wichtiger Hinweis:</strong><br>
+                                Diese Kostenschätzung ist unverbindlich und basiert auf Ihren Angaben.
+                                Endgültige Preise werden nach Besichtigung vor Ort bestätigt.
+                                Gültigkeit: 30 Tage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer footer-wave-layered">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Bau GmbH Franke</h4>
+                <p>Ihr regionaler Baupartner seit 1991. Moderne Technik trifft Familientradition - für Bauvorhaben in Sachsen und der Oberlausitz.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Leistungen</h4>
+                <ul>
+                    <li><a href="tiefbau.html">Tiefbau</a></li>
+                    <li><a href="hochbau.html">Hochbau</a></li>
+                    <li><a href="strassenbau.html">Straßenbau</a></li>
+                    <li><a href="bauvermessung.html">Bauvermessung</a></li>
+                    <li><a href="landwirtschaftsbau.html">Landwirtschaftsbau</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Unternehmen</h4>
+                <ul>
+                    <li><a href="ueber-uns.html">Über uns</a></li>
+                    <li><a href="referenzen.html">Referenzen</a></li>
+                    <li><a href="karriere.html">Karriere</a></li>
+                    <li><a href="bescheinigungen.html">Bescheinigungen</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-contact">
+                <h4>Kontakt</h4>
+                <p>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    035841-3190
+                </p>
+                <p>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    info@baufranke.de
+                </p>
+                <p>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    Scheibe 17<br>02779 Hainewalde
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bau GmbH Franke. Alle Rechte vorbehalten.</p>
+            <div class="footer-legal">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/animations.js"></script>
+<script src="/assets/js/universal-toast.js"></script>
+<script src="/assets/js/angebots-tool.js"></script>
+</body>
+</html>
