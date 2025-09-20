@@ -393,11 +393,9 @@ function initializeStickyHeader() {
                 header.style.transform = 'translateY(0)';
             }
             header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            header.style.backdropFilter = 'blur(10px)';
         } else {
             header.style.transform = 'translateY(0)';
             header.style.boxShadow = 'none';
-            header.style.backdropFilter = 'blur(10px)';
         }
 
         lastScrollY = currentScrollY;
