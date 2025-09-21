@@ -161,9 +161,6 @@ function updateMenuPosition() {
         // Update CSS custom properties für dynamische Höhen
         document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
 
-        // Menu padding-top für Header-Bereich anpassen
-        navMenu.style.paddingTop = `calc(${headerHeight}px + var(--spacing-2xl))`;
-
         // Overlay positioning
         overlay.style.top = `${headerHeight}px`;
         overlay.style.height = `calc(100vh - ${headerHeight}px)`;
@@ -192,9 +189,6 @@ function openMobileMenu() {
 
     if (header) {
         const headerHeight = header.offsetHeight;
-
-        // Set menu padding for header area
-        navMenu.style.paddingTop = `calc(${headerHeight}px + var(--spacing-2xl))`;
 
         // Set overlay position
         overlay.style.top = `${headerHeight}px`;

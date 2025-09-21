@@ -265,8 +265,14 @@ a:focus {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-light);
     transition: all var(--transition-base);
-    z-index: 1000;
+    z-index: 10000;
     position: relative;
+}
+
+.header.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
 .sticky-header {

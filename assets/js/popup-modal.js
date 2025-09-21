@@ -1,5 +1,5 @@
 // js/popup-modal.js
-// Modal Management System
+// Modal Management
 class ModalManager {
     constructor() {
         this.modals = new Map();
@@ -138,6 +138,9 @@ class ModalManager {
         // Add classes for show state and prevent body scroll
         modalOverlay.classList.add('active');
         document.body.classList.add('modal-open');
+        document.querySelector('.header').classList.add('hidden');
+
+        closeMobileMenu();
 
         // Focus management
         const modal = modalOverlay.querySelector('.modal');
@@ -168,6 +171,7 @@ class ModalManager {
         // Remove classes and restore body scroll
         modalOverlay.classList.remove('active');
         document.body.classList.remove('modal-open');
+        document.querySelector('.header').classList.remove('hidden');
 
         // Reset scrollbar width
         document.documentElement.style.setProperty('--scrollbar-width', '0px');

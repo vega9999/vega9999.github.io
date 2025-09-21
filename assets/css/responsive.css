@@ -31,7 +31,7 @@
 
     .nav-link {
         min-width: 180px;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         padding: var(--spacing-md);
     }
 
@@ -286,7 +286,7 @@
     /* Mobile nav links */
     .nav-link {
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 600;
         padding: var(--spacing-lg);
         border-radius: var(--radius-lg);
@@ -949,7 +949,7 @@ body.mobile-menu-open {
 
     .nav-link {
         min-width: 200px;
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 }
 
@@ -972,7 +972,6 @@ body.mobile-menu-open {
 /* Responsive Images */
 @media (max-width: 767.98px) {
     .hero-image,
-    .service-header-bg img,
     .intro-image img,
     .overview-image img,
     .tech-image img,
@@ -1000,6 +999,8 @@ body.mobile-menu-open {
 
     .service-header {
         min-height: 50vh;
+        margin-top: 10%;
+        padding: var(--spacing-2xl) 0;
     }
 
     .page-header {
