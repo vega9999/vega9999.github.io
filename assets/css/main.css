@@ -6194,7 +6194,7 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin: auto auto var(--spacing-md) auto;
     background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
     border-radius: 50%;
     box-shadow: 0 4px 20px rgba(0, 100, 0, 0.2);
@@ -6733,7 +6733,6 @@ select {
 
     .service-cta .cta-actions .btn {
         width: 100%;
-        max-width: 280px;
     }
 }
 
@@ -6909,7 +6908,6 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
 
     .service-cta .cta-actions .btn {
         width: 100%;
-        max-width: 300px;
     }
 
     .service-cta + .footer .footer-grid {
@@ -7158,7 +7156,6 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
 
     .cta-actions .btn {
         width: 100%;
-        max-width: 300px;
     }
 }
 
