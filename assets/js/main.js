@@ -75,7 +75,7 @@ function updateDarkModeToggle(isDarkMode) {
 
     if (icon && toggle && ctaBG) {
         ctaBG.src = isDarkMode
-            ? '/assets/images/hero/FrankeBau_Footer_DarkMode.png'
+            ? '/assets/images/hero/FrankeBau_Footer1_DarkMode.jpg'
             : '/assets/images/hero/FrankeBau_Footer1.jpg';
 
         ctaBG.alt = isDarkMode ? 'FrankeBau Mitarbeiter Cartoon bei Nacht' : 'FrankeBau Mitarbeiter Cartoon bei Tag';
