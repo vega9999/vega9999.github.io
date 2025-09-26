@@ -78,7 +78,7 @@ function updateDarkModeToggle(isDarkMode) {
             ? '/assets/images/hero/FrankeBau_Footer1_DarkMode.jpg'
             : '/assets/images/hero/FrankeBau_Footer1.jpg';
 
-        ctaBG.alt = isDarkMode ? 'FrankeBau Mitarbeiter Cartoon bei Nacht' : 'FrankeBau Mitarbeiter Cartoon bei Tag';
+        ctaBG.alt = isDarkMode ? 'FrankeBau Cartoon bei Nacht' : 'FrankeBau Cartoon bei Tag';
     }
 
     if (icon && toggle && logo) {
