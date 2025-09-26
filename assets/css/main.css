@@ -6839,15 +6839,6 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
         border-color: var(--border-dark);
     }
 
-    body.dark-mode .service-cta::before {
-        background: linear-gradient(
-                135deg,
-                rgba(0, 0, 0, 0.7) 0%,
-                rgba(0, 0, 0, 0.5) 50%,
-                rgba(0, 0, 0, 0.7) 100%
-        );
-    }
-
     body.dark-mode .service-cta h2,
     body.dark-mode .service-cta .lead {
         color: white;
