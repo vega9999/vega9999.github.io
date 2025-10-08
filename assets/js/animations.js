@@ -1,9 +1,3 @@
-/**
- * VOLLSTÄNDIGER ANIMATIONS-CODE - BAU FRANKE
- * Robust, konfliktfrei und vollständig getestet
- * Version: 1.0 - Funktioniert garantiert
- */
-
 (function() {
     'use strict';
 
@@ -50,7 +44,6 @@
         // Setup aller Animationskomponenten
         setup: function() {
             try {
-                console.log('🎬 Franke Animationen werden geladen...');
 
                 // Basis-Animationen einrichten
                 this.setupScrollAnimations();
@@ -61,7 +54,6 @@
                 this.setupUtilityAnimations();
 
                 this.isInitialized = true;
-                console.log('✅ Franke Animationen erfolgreich geladen!');
 
             } catch (error) {
                 console.warn('Setup Fehler:', error);
@@ -737,7 +729,7 @@
         // Vollständiger Fallback-Modus
         enableFallbackMode: function() {
             try {
-                console.log('🔄 Fallback-Modus aktiv - Alle Inhalte werden sofort angezeigt');
+                console.log('Fallback Modus aktiv - Alle Inhalte werden sofort angezeigt');
 
                 // Alle versteckten Elemente sofort anzeigen
                 const elements = document.querySelectorAll('[style*="opacity: 0"], .scroll-animate, .animate-on-scroll');

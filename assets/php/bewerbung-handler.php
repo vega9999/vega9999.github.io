@@ -373,7 +373,7 @@ class BewerbungsHandler {
         
         <div class="footer">
             <p><strong>Bau GmbH Franke</strong><br>
-            Hauptstraße 123<br>
+            Scheibe 17<br>
             02779 Hainewalde<br>
             www.baufranke.de</p>
         </div>

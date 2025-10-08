@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeLazyLoading();
     initializeSmoothScrolling();
     initializeAnimations();
-
-    console.log('Franke Bau Website initialized');
 });
 
 // Hero Scroll Button Funktionalität
@@ -522,7 +520,6 @@ function measurePerformance() {
     if ('performance' in window) {
         window.addEventListener('load', () => {
             const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-            console.log(`Page load time: ${loadTime}ms`);
         });
     }
 }
@@ -1303,7 +1300,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add global controls
     addGlobalAccordionControls();
 
-    console.log('Accordion bescheinigungen page initialized successfully');
 });
 
 // Project Map
@@ -1345,7 +1341,6 @@ class ProjectMapManager {
         }
 
         try {
-            console.log('Initialisiere Projekt-Karte...');
             this.showLoading();
 
             // Initialisiere Leaflet-Karte mit deaktivierten Zoom-Kontrollen
@@ -1385,7 +1380,6 @@ class ProjectMapManager {
                 this.hideLoading();
             }, 1000);
 
-            console.log('Projekt-Karte erfolgreich initialisiert');
 
         } catch (error) {
             console.error('Fehler beim Initialisieren der Karte:', error);
@@ -1398,7 +1392,6 @@ class ProjectMapManager {
      */
     loadProjectData() {
         const projectItems = document.querySelectorAll('.project-item');
-        console.log(`Gefundene Projekt-Elemente: ${projectItems.length}`);
 
         projectItems.forEach((item, index) => {
             try {
@@ -1425,7 +1418,6 @@ class ProjectMapManager {
                     details: details
                 };
 
-                console.log(`Projekt ${index + 1} geladen:`, project.title);
                 this.projectData.push(project);
 
             } catch (error) {
@@ -1433,14 +1425,12 @@ class ProjectMapManager {
             }
         });
 
-        console.log(`${this.projectData.length} Projekte erfolgreich geladen`);
     }
 
     /**
      * Erstellt Marker für alle Projekte
      */
     createMarkers() {
-        console.log('Erstelle Marker für', this.projectData.length, 'Projekte');
 
         if (this.projectData.length === 0) {
             console.error('Keine Projektdaten verfügbar für Marker');
@@ -1455,7 +1445,6 @@ class ProjectMapManager {
             }
         });
 
-        console.log(`${this.markers.length} Marker erstellt`);
 
         // Passe Kartenansicht an alle Marker an und speichere die Bounds
         if (this.markers.length > 0) {
@@ -1467,7 +1456,6 @@ class ProjectMapManager {
                 // Verhindere weiteres Zoomen nach dem initialen Fit
                 this.map.setMaxBounds(this.originalBounds.pad(0.2));
 
-                console.log('Kartenansicht an Marker angepasst und Bounds gespeichert');
             } catch (error) {
                 console.error('Fehler beim Anpassen der Kartenansicht:', error);
             }
@@ -1478,7 +1466,6 @@ class ProjectMapManager {
      * Erstellt einen individuellen Marker für ein Projekt
      */
     createProjectMarker(project) {
-        console.log('Erstelle Marker für:', project.title);
 
         // Verwende Standard Leaflet Marker mit angepasstem Icon
         const markerIcon = L.icon({
@@ -1502,7 +1489,6 @@ class ProjectMapManager {
 
         // Click-Event für Marker - öffne das Projekt-Modal
         marker.on('click', (e) => {
-            console.log('Marker geklickt für:', project.title);
             this.zoomToMarkerAndOpenModal(project, marker);
         });
 
@@ -1529,7 +1515,6 @@ class ProjectMapManager {
             className: 'dark-tile-layer'
         });
 
-        console.log('Tile Layers für Light/Dark Mode erstellt');
     }
 
     /**
@@ -1545,7 +1530,6 @@ class ProjectMapManager {
         this.currentTileLayer = isDark ? this.darkTileLayer : this.lightTileLayer;
         this.currentTileLayer.addTo(this.map);
 
-        console.log(`Tile Layer gewechselt zu: ${isDark ? 'Dark' : 'Light'} Mode`);
     }
 
     /**
@@ -1558,7 +1542,6 @@ class ProjectMapManager {
             marker.setIcon(newIcon);
         });
 
-        console.log(`Marker-Icons aktualisiert für ${isDark ? 'Dark' : 'Light'} Mode`);
     }
 
     /**
@@ -1599,14 +1582,12 @@ class ProjectMapManager {
             });
         }
 
-        console.log('Dark Mode Watcher eingerichtet');
     }
 
     /**
      * Wechselt zwischen Light und Dark Mode
      */
     switchMode(isDark) {
-        console.log(`Wechsle Karten-Mode zu: ${isDark ? 'Dark' : 'Light'}`);
 
         // Smooth Transition-Effekt
         const mapContainer = document.getElementById('project-map');
@@ -1636,7 +1617,6 @@ class ProjectMapManager {
      * Zoomt zu einem Marker und öffnet das Modal
      */
     zoomToMarkerAndOpenModal(project, marker) {
-        console.log('Zoome zu Marker und öffne Modal für:', project.title);
 
         this.isZoomedToMarker = true;
 
@@ -1675,7 +1655,6 @@ class ProjectMapManager {
      */
     zoomBackToOriginalView() {
         if (this.originalBounds && this.isZoomedToMarker) {
-            console.log('Zoome zurück zur ursprünglichen Ansicht');
 
             this.map.fitBounds(this.originalBounds, {
                 animate: true,
@@ -1747,7 +1726,6 @@ class ProjectMapManager {
     showAllImages(projectId) {
         const project = this.projectData.find(p => p.id === projectId);
         if (project && project.images.length > 0) {
-            console.log('Öffne Lightbox für Projekt:', project.title);
             this.openLightbox(project.images, 0);
         }
     }
@@ -1997,7 +1975,6 @@ class ProjectMapManager {
 
 // Überarbeitete focusOnProject Funktion
 function focusOnProject(projectIndex) {
-    console.log('Fokussiere auf Projekt:', projectIndex);
 
     // Scrolle zur Karte
     const mapContainer = document.querySelector('.project-map-container');
@@ -2154,7 +2131,6 @@ class ProjectModalManager {
             closeBtn.focus();
         }
 
-        console.log('Projekt-Modal geöffnet für:', this.currentProject.title);
     }
 
     closeModal() {
@@ -2297,7 +2273,6 @@ let projectModalManager = null;
 
 // Initialisierung nach DOM-Load
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Initialisiere Projekt-System...');
 
     // Prüfe ob Leaflet verfügbar ist
     if (typeof L === 'undefined') {
@@ -2313,7 +2288,6 @@ document.addEventListener('DOMContentLoaded', () => {
     projectMapManager = new ProjectMapManager();
     window.projectMapManager = projectMapManager;
 
-    console.log('Projekt-System vollständig initialisiert');
 });
 
 // Cleanup bei Page Unload
@@ -2358,7 +2332,6 @@ class OrganigrammManager {
         }
 
         try {
-            console.log('Initialisiere Organigramm...');
 
             // Sammle alle Abteilungen und Mitarbeiterkarten
             this.collectElements();
@@ -2376,7 +2349,6 @@ class OrganigrammManager {
             this.setupContactTracking();
 
             this.isLoaded = true;
-            console.log('Organigramm erfolgreich initialisiert');
 
         } catch (error) {
             console.error('Fehler beim Initialisieren des Organigramms:', error);
@@ -2390,7 +2362,6 @@ class OrganigrammManager {
         this.departments = Array.from(document.querySelectorAll('.org-department'));
         this.memberCards = Array.from(document.querySelectorAll('.member-card'));
 
-        console.log(`Gefunden: ${this.departments.length} Abteilungen, ${this.memberCards.length} Mitarbeiterkarten`);
     }
 
     /**
@@ -2747,7 +2718,6 @@ class OrganigrammManager {
      * @param {string} contactValue - Telefonnummer oder E-Mail
      */
     trackContactAction(type, memberName, contactValue) {
-        console.log(`Kontakt-Aktion: ${type} für ${memberName} (${contactValue})`);
 
         // Hier könnte Google Analytics oder ein anderes Tracking-System integriert werden
         if (typeof gtag !== 'undefined') {
@@ -2764,7 +2734,6 @@ class OrganigrammManager {
      * @param {string} memberName - Name des Mitarbeiters
      */
     trackMemberCardClick(memberName) {
-        console.log(`Mitarbeiterkarte geklickt: ${memberName}`);
 
         if (typeof gtag !== 'undefined') {
             gtag('event', 'member_card_click', {
@@ -2783,7 +2752,6 @@ class OrganigrammManager {
         modals.forEach(modal => this.closeContactModal(modal));
 
         // Aktualisiere Layout falls nötig
-        console.log('Organigramm Layout aktualisiert');
     }
 
     /**
@@ -2820,7 +2788,6 @@ class OrganigrammManager {
         this.memberCards = [];
         this.isLoaded = false;
 
-        console.log('Organigramm zerstört');
     }
 }
 
@@ -2887,7 +2854,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const ansprechpartnerSection = document.getElementById('ansprechpartner');
 
     if (ansprechpartnerSection) {
-        console.log('Ansprechpartner-Sektion gefunden, initialisiere Organigramm...');
         organigrammManager = new OrganigrammManager();
 
         // Globale Referenz für externe Zugriffe

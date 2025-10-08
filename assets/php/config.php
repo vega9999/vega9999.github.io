@@ -13,22 +13,15 @@ if (!defined('ANGEBOT_TOOL_ACCESS')) {
     die('Direkter Zugriff nicht erlaubt');
 }
 
-/**
- * UMGEBUNGS-KONFIGURATION
- * Ändern Sie diese Werte je nach Umgebung (Development/Production)
- */
 define('ENVIRONMENT', 'development'); // 'development' oder 'production'
 define('DEVELOPMENT_MODE', ENVIRONMENT === 'development');
 define('DEBUG_MODE', ENVIRONMENT === 'development');
 
-/**
- * FIRMEN-INFORMATIONEN
- * Diese Daten erscheinen im PDF-Angebot und in E-Mails
- */
+
 $COMPANY_CONFIG = [
     'name' => 'Bau GmbH Franke',
     'address' => [
-        'street' => 'Hauptstraße 123',
+        'street' => 'Scheibe 17',
         'zip' => '02779',
         'city' => 'Hainewalde',
         'country' => 'Deutschland'
@@ -36,7 +29,7 @@ $COMPANY_CONFIG = [
     'contact' => [
         'phone' => '035841-3190',
         'fax' => '035841-3191',
-        'email' => 'info@bau-franke.de',
+        'email' => 'info@baufranke.de',
         'web' => 'www.baufranke.de'
     ],
     'legal' => [
@@ -49,10 +42,7 @@ $COMPANY_CONFIG = [
     'slogan' => 'Ihr regionaler Baupartner seit 1991'
 ];
 
-/**
- * E-MAIL-KONFIGURATION
- * Anpassen für Ihr E-Mail-System
- */
+
 $EMAIL_CONFIG = [
     // Absender-Einstellungen
     'from_email' => 'noreply@baufranke.de',
@@ -64,12 +54,12 @@ $EMAIL_CONFIG = [
 
     // SMTP-Einstellungen (für PHPMailer - Production)
     'smtp' => [
-        'enabled' => false, // Auf true setzen für SMTP
+        'enabled' => false,
         'host' => 'smtp.your-provider.com',
         'port' => 587,
         'username' => 'your-smtp-username',
         'password' => 'your-smtp-password',
-        'encryption' => 'tls', // 'tls' oder 'ssl'
+        'encryption' => 'tls',
         'auth' => true
     ],
 
@@ -85,10 +75,7 @@ $EMAIL_CONFIG = [
     'log_emails' => true
 ];
 
-/**
- * ERWEITERTE PREIS-KONFIGURATION
- * Basis-Preise für die Kalkulation nach Kategorien (alle Preise in Euro)
- */
+
 $PRICING_CONFIG = [
     // Material-Preise nach Kategorien (€/m²)
     'materials' => [
@@ -1023,26 +1010,6 @@ if (!validateExtendedConfig() && !DEVELOPMENT_MODE) {
 
 // Performance-Timer starten
 startPerformanceTimer('config_load');
-
-/**
- * CHANGELOG
- *
- * Version 2.0.0 (2024-12-XX)
- * - Kategorieunterstützung hinzugefügt
- * - PDF-Viewer Integration
- * - Erweiterte Sicherheitsfeatures
- * - Performance-Optimierungen
- * - Umfassendes Logging-System
- * - Backup-Funktionalität
- * - Erweiterte E-Mail-Templates
- * - Material-Konfiguration nach Kategorien
- *
- * Version 1.0.0 (2024-11-XX)
- * - Initiale Konfigurationsdatei
- * - Basis-Preiskonfiguration
- * - E-Mail und PDF-Einstellungen
- * - Sicherheitskonfiguration
- */
 
 // Performance-Timer beenden
 endPerformanceTimer('config_load');

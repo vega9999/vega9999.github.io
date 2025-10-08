@@ -26,7 +26,6 @@ class BewerbungsformularManager {
         setTimeout(() => {
             this.form = document.getElementById('bewerbung-form');
             if (!this.form) {
-                console.log('Bewerbungsformular nicht gefunden - warte auf Modal öffnung');
                 this.waitForModal();
                 return;
             }
@@ -57,11 +56,10 @@ class BewerbungsformularManager {
         this.setupToastStyles();
         this.setupToastContainer();
         this.setupEventListeners();
-        this.setupBewerbungFileUploads(); // Spezifisch für Bewerbung
+        this.setupBewerbungFileUploads();
         this.setupFormValidation();
         this.checkUrlParams();
         this.isInitialized = true;
-        console.log('Bewerbungsformular Manager initialisiert');
     }
 
     setupToastStyles() {
@@ -222,7 +220,6 @@ class BewerbungsformularManager {
                 }
             `;
             document.head.appendChild(toastStyles);
-            console.log('Bewerbung Toast styles loaded');
         }
     }
 
@@ -232,7 +229,6 @@ class BewerbungsformularManager {
             this.toastContainer.id = 'bewerbung-toast-container';
             this.toastContainer.className = 'bewerbung-toast-container';
             document.body.appendChild(this.toastContainer);
-            console.log('Bewerbung Toast container created');
         }
     }
 
@@ -633,7 +629,6 @@ class BewerbungsformularManager {
     }
 
     showToast(message, type = 'info', duration = 5000) {
-        console.log('showToast called:', message, type);
 
         if (!this.toastContainer) {
             this.setupToastContainer();
@@ -657,7 +652,6 @@ class BewerbungsformularManager {
         `;
 
         this.toastContainer.appendChild(toast);
-        console.log('Toast added to container');
 
         const closeBtn = toast.querySelector('.bewerbung-toast-close');
         closeBtn.addEventListener('click', () => {

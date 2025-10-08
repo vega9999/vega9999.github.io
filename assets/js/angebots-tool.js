@@ -1,9 +1,3 @@
-/**
- * ANGEBOTS-TOOL JAVASCRIPT - BAU FRANKE (VERBESSERT)
- * Frontend-Logik für das automatisierte Angebots-Tool
- * Version: 2.0.0 - Mit Kategorien, verbesserter UX und PDF-Viewer
- */
-
 (function() {
     'use strict';
 
@@ -306,7 +300,6 @@
 
         setup() {
             try {
-                console.log('🏗️ Angebots-Tool wird initialisiert...');
 
                 // Event Listeners
                 this.setupNavigationEvents();
@@ -323,7 +316,6 @@
                 this.updateProgressSteps();
 
                 this.isInitialized = true;
-                console.log('✅ Angebots-Tool erfolgreich geladen!');
 
                 this.playWelcomeAnimation();
 

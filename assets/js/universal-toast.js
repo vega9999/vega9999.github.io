@@ -29,7 +29,6 @@ class UniversalToastManager {
         window.showToast = (message, type, duration, title) => this.showToast(message, type, duration, title);
         window.universalToast = this;
 
-        console.log('Enhanced Universal Toast System initialized with AJAX support');
     }
 
     setupStyles() {
