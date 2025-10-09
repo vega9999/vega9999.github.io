@@ -1303,7 +1303,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Project Map
-// Project Map - Überarbeitete Version
 class ProjectMapManager {
     constructor() {
         this.map = null;
@@ -1311,8 +1310,8 @@ class ProjectMapManager {
         this.projectData = [];
         this.currentLightboxIndex = 0;
         this.currentLightboxImages = [];
-        this.originalBounds = null; // Speichert die ursprüngliche Kartenansicht
-        this.isZoomedToMarker = false; // Track ob zu einem Marker gezoomt wurde
+        this.originalBounds = null;
+        this.isZoomedToMarker = false;
 
         this.init();
     }
